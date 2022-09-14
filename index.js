@@ -69,15 +69,15 @@ const input = "";
 var objCount = bad.badges.length;
 for (var x = 0; x < objCount; x++) {
 		var curitem = bad.badges[x];
-		console.log(curitem);
+		input += curitem;
 }
 
 
- for(var obj in bad) 
+ /*for(var obj in bad) 
  {
 	console.log(obj);
 	input += '<img alt="' + obj.name + '" src="https://img.shields.io/badge/-"' + obj.name + "-" + obj.color + '"?style=flat-square&logo="' + obj.logo + '"&logoColor=white" />';
- }
+ }*/
  
  console.log(input);
 
