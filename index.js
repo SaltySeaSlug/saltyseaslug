@@ -71,11 +71,13 @@ if (config.badges && config.badges.enabled)
 
 if (config.social)
 {
-	const social = getFields(await getSocialData());
+	const social = await getSocialData();
 	
 	for (var i in social)
 	{
 		console.log(social[i]);
+		console.log(social[i][0].name);
+		console.log(social[i].name);
 		socialResult += `[<img src="https://img.shields.io/badge/${social[i].name}-%231DA1F2.svg?&style=for-the-badge&logo=${social[i].logo}&logoColor=white" height=${badgeHeight}>](${social[i].url})`;
 	}
 	
