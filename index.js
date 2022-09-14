@@ -33,6 +33,9 @@ md.use(emoji);
     console.error(`Failed to load blog posts from ${websiteUrl}`, e);
   }
 
+
+  	let badgesResult = '';
+
  
    /* import template pages */
 	const aboutMe = fs.readFileSync('./templates/about-me.md', 'utf8');
@@ -49,17 +52,18 @@ md.use(emoji);
 
 if (config.badges && config.badges.enabled)
 {
-  	input = '';
 	const badges = getFields(await generateBadges());
 
 	for (var i in badges)
 	{
-		input += '<img alt="' + badges[i].name + '" src="https://img.shields.io/badge/-' + badges[i].name + "-" + badges[i].color + '?style=flat-square&logo=' + badges[i].logo + '&logoColor=white" />';
+		badgesResult += '<img alt="' + badges[i].name + '" src="https://img.shields.io/badge/-' + badges[i].name + "-" + badges[i].color + '?style=flat-square&logo=' + badges[i].logo + '&logoColor=white" />';
 	}
+	
+	badgesResult += "\n\n";
 }
 
 
-  const text = `${input}\n\n${headerImage}\n\n
+  const text = `${badgesResult}${headerImage}\n\n
   ${twitterBadge} ${linkedInBadge} ${instagramBadge} ${mediumBadge} ${devToBadge}\n\n
   [:arrow_right: Check out my website](${websiteUrl})\n\n
   ${buyMeACoffeeButton}\n\n
