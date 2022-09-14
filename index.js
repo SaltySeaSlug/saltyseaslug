@@ -33,11 +33,9 @@ md.use(emoji);
     console.error(`Failed to load blog posts from ${websiteUrl}`, e);
   }
 
-	let promises = [];
  
    /* import template pages */
 	const aboutMe = fs.readFileSync('./templates/about-me.md', 'utf8');
-	promises.push(await generateBadges());
 
   const headerImage = `<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">`;
   const twitterBadge = `[<img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=${badgeHeight}>](${twitterUrl})`;
@@ -66,17 +64,22 @@ md.use(emoji);
   const render = md.render(text);
 const input = "";
  
- for(let i = 0; i < promises.length; i++) 
+ let bad = await generateBadges();
+ 
+ 	console.log(bad);
+	 	console.log(JSON.stringify(bad));
+
+	
+ for(let i = 0; i < bad.length; i++) 
  {
-    let obj = promises[i];
+    let obj = bad[0][i];
 	input += '<img alt="' + obj.badge.name + '" src="https://img.shields.io/badge/-"' + obj.badge.name + "-" + obj.badge.color + '"?style=flat-square&logo="' + obj.badge.logo + '"&logoColor=white" />';
  }
 
   const result = aboutMe + "\n" + input + "\n\n" + render;
 	
 	
-	console.log(promises);
-	console.log(printArray(promises));
+
 	console.log(result);
 
 
