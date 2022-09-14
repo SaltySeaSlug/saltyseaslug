@@ -3,6 +3,7 @@ const md = require("markdown-it")({
   breaks: true, // Convert '\n' in paragraphs into <br>
   linkify: true, // Autoconvert URL-like text to links
 });
+const md1 = require("markdown-it")({});
 const emoji = require("markdown-it-emoji");
 const fs = require("fs");
 const Parser = require("rss-parser");
@@ -53,9 +54,10 @@ md.use(emoji);
   ## GitHub Stats\n
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
+  var rend = md1.renderInline(aboutMe);
   const result = md.render(text);
 
-  fs.writeFile("README.md", result, function (err) {
+  fs.writeFile("README.md", rend + result, function (err) {
     if (err) return console.log(err);
     console.log(`${result} > README.md`);
   });
