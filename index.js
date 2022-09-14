@@ -5,6 +5,7 @@ const md = require("markdown-it")({
 });
 const emoji = require("markdown-it-emoji");
 const fs = require("fs");
+const fs1 = require('fs-extra')
 const Parser = require("rss-parser");
 const parser = new Parser();
 
@@ -36,7 +37,7 @@ md.use(emoji);
   const instagramBadge = `[<img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" height=${badgeHeight}>](${instagramUrl})`;
   const mediumBadge = `[<img src="https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white" height=${badgeHeight}>](${mediumUrl})`;
   const devToBadge = `[<img src="https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev-dot-to&logoColor=white" height=${badgeHeight}>](${devToUrl})`;
-  const aboutMe = fs.readFileSync('./templates/about-me.md');
+  const aboutMe = fs1.readFileSync('./templates/about-me.md', 'utf8');
 
   const buyMeACoffeeButton = `<a href="https://www.buymeacoffee.com/mokkapps" target="_blank" rel="noreferrer nofollow">
       <img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="40" width="170" >
