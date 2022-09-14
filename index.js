@@ -4,7 +4,8 @@ const md = require("markdown-it")({
   linkify: true, // Autoconvert URL-like text to links
 });
 
-const highlight = require("markdown-it-highlightjs");
+import highlightjs from 'markdown-it-highlightjs';
+
 const emoji = require("markdown-it-emoji");
 const fs = require("fs");
 const Parser = require("rss-parser");
