@@ -22,5 +22,5 @@ Console.WriteLine($"{position}, currently based in {location}.");
 <p><a href="https://twitter.com/saltyseaslug"><img src="https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&amp;layout=wide" alt="github-readme-twitter"></a></p>
 <h2>GitHub Stats</h2>
 <p><img src="https://github-readme-stats.vercel.app/api?username=saltyseaslug&amp;show_icons=true&amp;theme=dracula" alt="GitHub Stats"></p>
-<hr><p align="center">This README file is automatically generated every day! The last refresh was on Wednesday, 14 September, 22:17 SAST.<br/></p>
-					<p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/workflows/build/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/saltyseaslug" alt="Profile views"/></p>
+<hr><p align="center">This README file is automatically generated every day! The last refresh was on Wednesday, 14 September, 22:24 SAST.<br/></p>
+					<p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/saltyseaslug" alt="Profile views"/></p>
