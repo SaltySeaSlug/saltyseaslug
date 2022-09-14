@@ -66,7 +66,7 @@ const input = "";
  
  const bad = await generateBadges();
  
-const result1 = getFields(bad, 'name');
+const result1 = getFields(bad);
 console.log(result1);
 
 
@@ -104,8 +104,8 @@ async function loadBlogPosts() {
 }
 
 
-function getFields(array, field) {
-    return array.map(a => a[field]);
+function getFields(array) {
+    return array.map(({name,logo},color) =>  ({name,logo,color}) );
 }
 
 function Rainbow()
