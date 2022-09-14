@@ -34,6 +34,7 @@ md.use(emoji);
   }
 
   	let badgesResult = '';
+	let socialResult = '';
 	let textToRender = '';
  
 	let refreshDate = await getRefreshDate();
@@ -66,6 +67,18 @@ if (config.badges && config.badges.enabled)
 	}
 	
 	textToRender += `${badgesResult}\n\n`;
+}
+
+if (config.social && config.social.enabled)
+{
+	const social = getFields(await getSocialData());
+	
+	for (var i in social)
+	{
+		socialResult += `[<img src="https://img.shields.io/badge/${social[i].name}-%231DA1F2.svg?&style=for-the-badge&logo=${social[i].logo}&logoColor=white" height=${badgeHeight}>](${social[i].url})`;
+	}
+	
+	textToRender += `${socialResult}\n\n`;
 }
 
 if (config.template.showHeaderImage)
@@ -443,6 +456,13 @@ async function generateBadges() {
   return Promise.resolve(formattedBadges);
 }
 
+async function getSocialData() {
+  const social = config.social.map(item => ({
+    ...item,
+    logo: item.logo || item.name,
+  }));
+  return Promise.resolve(social);
+}
 
 async function getRefreshDate() {
   const refreshDate = new Date().toLocaleDateString('en-ZA', {
