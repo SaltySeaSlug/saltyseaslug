@@ -1,1 +1,1 @@
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true&theme=dracula)
