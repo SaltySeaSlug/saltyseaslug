@@ -422,10 +422,9 @@ function printArray(array)
 	for (var i = 0; i < array.length; i++) {
   var str = '';
   for (var j = 0; j <= i; j++) {
-    if (array[j] == 'E') str += '3';
-    else str += array[j];
+str += array[j];
   }
+	}
   
   return str;
-}
 }
