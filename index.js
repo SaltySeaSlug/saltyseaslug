@@ -54,7 +54,7 @@ if (config.badges && config.badges.enabled)
 {
 	const badges = getFields(await generateBadges());
 
-	badgesResult += config.badges.heading;
+	badgesResult += config.badges.heading + "\n\n";
 	
 	for (var i in badges)
 	{
