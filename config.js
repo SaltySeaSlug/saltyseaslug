@@ -98,6 +98,7 @@ github: {
       icon: '24292e',
       background: 'ffffff',
     },
+},
 };
 
 
