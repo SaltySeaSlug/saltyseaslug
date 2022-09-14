@@ -83,7 +83,7 @@ if (config.template.showHeaderImage)
   ## Latest Tweets\n
   [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&layout=wide)](https://twitter.com/saltyseaslug)\n
   ## GitHub Stats\n
-  ${githubStats}`;
+  ${githubStats}\n${footer}`;
 
   const render = md.render(textToRender);
 
