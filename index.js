@@ -70,7 +70,7 @@ const input = "";
 	console.log(JSON.stringify(bad));
 
 	
- for(let i = 0; i < bad.length; i++) 
+ for(let i = 0; i < bad.badges.length; i++) 
  {
     let obj = bad[i];
 	console.log(obj);
