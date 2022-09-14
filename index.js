@@ -42,7 +42,7 @@ md.use(emoji);
       <img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="40" width="170" >
     </a>`;
 
-  const text = `${aboutMe}${headerImage}\n\n
+  const text = `${aboutMe}\n\n{headerImage}\n\n
   ${twitterBadge} ${linkedInBadge} ${instagramBadge} ${mediumBadge} ${devToBadge}\n\n
   [:arrow_right: Check out my website](${websiteUrl})\n\n
   ${buyMeACoffeeButton}\n\n
