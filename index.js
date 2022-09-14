@@ -65,6 +65,11 @@ md.use(emoji);
 
   const render = md.render(text);
   const result = aboutMe + "\n" + printArray(promises) + "\n\n" + render;
+	
+	console.log(promises);
+	console.log(printArray(promises));
+	console.log(result);
+
 
   fs.writeFile("README.md", result, function (err) {
     if (err) return console.log(err);
