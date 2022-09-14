@@ -66,16 +66,13 @@ const input = "";
  
  const bad = await generateBadges();
  
- 	console.log(bad);
-	console.log(JSON.stringify(bad));
-
 	
- for(let i = 0; i < bad.badges.length; i++) 
+ for(let i = 0; i < bad[0].length; i++) 
  {
     let obj = bad[i];
 	console.log(obj);
 	console.log(bad[i]);
-	input += '<img alt="' + obj.badge.name + '" src="https://img.shields.io/badge/-"' + obj.badge.name + "-" + obj.badge.color + '"?style=flat-square&logo="' + obj.badge.logo + '"&logoColor=white" />';
+	input += '<img alt="' + obj.name + '" src="https://img.shields.io/badge/-"' + obj.name + "-" + obj.color + '"?style=flat-square&logo="' + obj.logo + '"&logoColor=white" />';
  }
  
  console.log(input);
