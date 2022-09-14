@@ -1,7 +1,7 @@
 // config.js
 const config = {
 badges: {
-    enabled: true,
+    enabled: false,
     spectrum: ['46a2f1', '311C87', 'DD0031'],
     list: [
       {
