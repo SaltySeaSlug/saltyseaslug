@@ -1,4 +1,14 @@
-<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">
+<pre><code class="language-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
+
+string name = &quot;Mark&quot;;
+string declaration = &quot;self-taught self-proclaimed full-stack developer&quot;;
+const string position = &quot;Senior Analyst Programmer&quot;;
+const string location = &quot;Cape Town, South Africa&quot;;
+
+Console.WriteLine(&quot;I'm {0} a {1}.&quot;, name, declaration);
+Console.WriteLine($&quot;{position}, currently based in {location}.&quot;);
+</code></pre>
+<p>{headerImage}</p>
 <p><a href="https://www.twitter.com/mokkapps"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=25></a> <a href="https://www.linkedin.com/in/mokkapps"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height=25></a> <a href="https://www.instagram.com/mokkapps/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" height=25></a> <a href="https://medium.com/@MokkappsDev"><img src="https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white" height=25></a> <a href="https://dev.to/mokkapps"><img src="https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev-dot-to&logoColor=white" height=25></a></p>
 <p><a href="https://www.mokkapps.de">➡️ Check out my website</a></p>
   <a href="https://www.buymeacoffee.com/mokkapps" target="_blank" rel="noreferrer nofollow">
