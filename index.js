@@ -71,7 +71,7 @@ if (config.badges && config.badges.enabled)
 
 if (config.social)
 {
-	const social = await getSocialData();
+	const social = getField(await getSocialData());
 	
 	for (var i in social)
 	{
@@ -136,8 +136,12 @@ async function loadBlogPosts() {
 
 
 function getFields(array) {
-    return array.map(({name,logo,color}) =>  ({name,logo,color}) );
+    return array.map(({name,logo,color}) =>  ({name,logo,color}));
 }
+function getField(array) {
+    return array.map(({item}) => ({item}));
+}
+
 
 function Rainbow()
 {
