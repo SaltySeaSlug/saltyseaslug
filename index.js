@@ -54,7 +54,7 @@ console.log(result1);
 for (var i in result1)
 {
 	console.log(result1[i].name);
-	input += '<img alt="' + result1[i].name + '" src="https://img.shields.io/badge/-"' + result1[i].name + "-" + result1[i].color + '"?style=flat-square&logo="' + result1[i].logo + '"&logoColor=white" />';
+	input += '<img alt="' + result1[i].name + '" src="https://img.shields.io/badge/-' + result1[i].name + "-" + result1[i].color + '?style=flat-square&logo=' + result1[i].logo + '&logoColor=white" />';
 }
 
 
