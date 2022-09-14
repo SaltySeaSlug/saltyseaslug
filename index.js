@@ -62,7 +62,7 @@ md.use(emoji);
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
   const render = md.render(text);
-const input = "";
+	input = '';
  
  const bad = await generateBadges();
  
