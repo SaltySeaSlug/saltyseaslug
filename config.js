@@ -90,3 +90,6 @@ badges: {
     ],
   },
 };
+
+
+module.exports = config;
