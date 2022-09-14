@@ -461,7 +461,7 @@ async function getSocialData() {
     name: item.name,
 	color: item.color,
 	url: item.url,
-    logo: logo || name,
+    logo: item.logo || item.name,
   }));
   return Promise.resolve(social);
 }
