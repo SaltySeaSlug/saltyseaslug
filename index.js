@@ -55,7 +55,7 @@ md.use(emoji);
 
   const result = md.render(text);
 
-  fs.writeFile("README.md", aboutMe + result, function (err) {
+  fs.writeFile("README.md", aboutMe + "\n" + result, function (err) {
     if (err) return console.log(err);
     console.log(`${result} > README.md`);
   });
