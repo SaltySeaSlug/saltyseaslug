@@ -44,25 +44,7 @@ md.use(emoji);
   const mediumBadge = `[<img src="https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white" height=${badgeHeight}>](${mediumUrl})`;
   const devToBadge = `[<img src="https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev-dot-to&logoColor=white" height=${badgeHeight}>](${devToUrl})`;
   
-  
-
-  const buyMeACoffeeButton = `<a href="https://www.buymeacoffee.com/mokkapps" target="_blank" rel="noreferrer nofollow">
-      <img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="40" width="170" >
-    </a>`;
-
-  const text = `${headerImage}\n\n
-  ${twitterBadge} ${linkedInBadge} ${instagramBadge} ${mediumBadge} ${devToBadge}\n\n
-  [:arrow_right: Check out my website](${websiteUrl})\n\n
-  ${buyMeACoffeeButton}\n\n
-  ## Latest Blog Posts\n
-  ${blogPosts}\n
-  ## Latest Tweets\n
-  [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&layout=wide)](https://twitter.com/saltyseaslug)\n
-  ## GitHub Stats\n
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
-
-  const render = md.render(text);
-	input = '';
+  	input = '';
  
  const bad = await generateBadges();
  
@@ -75,6 +57,24 @@ for (var i in result1)
 	input += '<img alt="' + result1[i].name + '" src="https://img.shields.io/badge/-"' + result1[i].name + "-" + result1[i].color + '"?style=flat-square&logo="' + result1[i].logo + '"&logoColor=white" />';
 }
 
+
+  const buyMeACoffeeButton = `<a href="https://www.buymeacoffee.com/mokkapps" target="_blank" rel="noreferrer nofollow">
+      <img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="40" width="170" >
+    </a>`;
+
+  const text = `${input}\n\n${headerImage}\n\n
+  ${twitterBadge} ${linkedInBadge} ${instagramBadge} ${mediumBadge} ${devToBadge}\n\n
+  [:arrow_right: Check out my website](${websiteUrl})\n\n
+  ${buyMeACoffeeButton}\n\n
+  ## Latest Blog Posts\n
+  ${blogPosts}\n
+  ## Latest Tweets\n
+  [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&layout=wide)](https://twitter.com/saltyseaslug)\n
+  ## GitHub Stats\n
+  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
+
+  const render = md.render(text);
+
  /*for(var obj in bad) 
  {
 	console.log(obj);
@@ -83,7 +83,7 @@ for (var i in result1)
  
  console.log(input);
 
-  const result = aboutMe + "\n" + input + "\n\n" + render;
+  const result = aboutMe + "\n\n" + render;
 	
   fs.writeFile("README.md", result, function (err) {
     if (err) return console.log(err);
