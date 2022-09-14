@@ -54,6 +54,8 @@ if (config.badges && config.badges.enabled)
 {
 	const badges = getFields(await generateBadges());
 
+	badgesResult += config.badges.heading;
+	
 	for (var i in badges)
 	{
 		badgesResult += '<img alt="' + badges[i].name + '" src="https://img.shields.io/badge/-' + badges[i].name + "-" + badges[i].color + '?style=flat-square&logo=' + badges[i].logo + '&logoColor=white" />';
