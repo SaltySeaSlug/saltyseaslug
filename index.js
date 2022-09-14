@@ -457,10 +457,10 @@ async function generateBadges() {
 }
 
 async function getSocialData() {
-  const social = config.social.map((name, color, url, logo) => ({
-    name,
-	color,
-	url,
+  const social = config.social.map((item) => ({
+    name: item.name,
+	color: item.color,
+	url: item.url,
     logo: logo || name,
   }));
   return Promise.resolve(social);
