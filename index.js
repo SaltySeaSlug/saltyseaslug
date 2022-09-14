@@ -33,9 +33,11 @@ md.use(emoji);
     console.error(`Failed to load blog posts from ${websiteUrl}`, e);
   }
 
+	let promises = [];
+ 
    /* import template pages */
 	const aboutMe = fs.readFileSync('./templates/about-me.md', 'utf8');
-	const badges =  promises.push(generateBadges());
+	promises.push(generateBadges());
 
   const headerImage = `<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">`;
   const twitterBadge = `[<img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=${badgeHeight}>](${twitterUrl})`;
@@ -62,7 +64,7 @@ md.use(emoji);
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
   const render = md.render(text);
-  const result = aboutMe + "\n" + badges + "\n\n" + render;
+  const result = aboutMe + "\n" + promises + "\n\n" + render;
 
   fs.writeFile("README.md", result, function (err) {
     if (err) return console.log(err);
