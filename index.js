@@ -69,6 +69,10 @@ const input = "";
 const result1 = getFields(bad);
 console.log(result1);
 
+for (var i in result1)
+{
+	console.log(result1[i].name);
+}
 
  /*for(var obj in bad) 
  {
@@ -105,7 +109,7 @@ async function loadBlogPosts() {
 
 
 function getFields(array) {
-    return array.map(({name,logo},color) =>  ({name,logo,color}) );
+    return array.map(({name,logo,color}) =>  ({name,logo,color}) );
 }
 
 function Rainbow()
