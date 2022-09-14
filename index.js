@@ -31,7 +31,7 @@ md.use(emoji);
   }
 
    /* import template pages */
-	const aboutMe = require('./templates/about-me.md');
+	const aboutMe = fs.readFileSync('./templates/about-me.md', 'utf8');
 	const badges =  generateBadges();
 
   const headerImage = `<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">`;
