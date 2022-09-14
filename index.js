@@ -49,8 +49,8 @@ md.use(emoji);
 	const mediumBadge = `[<img src="https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white" height=${badgeHeight}>](${mediumUrl})`;
 	const devToBadge = `[<img src="https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev-dot-to&logoColor=white" height=${badgeHeight}>](${devToUrl})`;
     const buyMeACoffeeButton = `<a href="https://www.buymeacoffee.com/mokkapps" target="_blank" rel="noreferrer nofollow"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="40" width="170" ></a>`;
-	const footer = `<p align="center">This README file is automatically generated every day! The last refresh was on ${refreshDate}.<br/></p>
-					<p align="center"><img src="https://github.com/'+ config.github.username +'/'+ config.github.username +'/workflows/README%20build/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/'+ config.github.username +'/'+ config.github.username +'?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/'+ config.github.username +'/'+ config.github.username +'?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/'+ config.github.username +'" alt="Profile views"/></p>`;
+	const footer = `<hr><p align="center">This README file is automatically generated every day! The last refresh was on ${refreshDate}.<br/></p>
+					<p align="center"><img src="https://github.com/${config.github.username}/${config.github.username}/workflows/build/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/${config.github.username}/${config.github.username}?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/${config.github.username}/${config.github.username}?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/${config.github.username}" alt="Profile views"/></p>`;
 
 
 
