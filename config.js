@@ -90,6 +90,45 @@ badges: {
       },
     ],
   },
+   social: [
+    {
+      name: 'Medium',
+      color: '12100E',
+      url: 'https://medium.com/@arjenbrandenburgh',
+    },
+    {
+      name: 'Github',
+      username: 'arjenbrandenburgh',
+      color: '12100E',
+      url: 'https://github.com/arjenbrandenburgh',
+    },
+    {
+      name: 'Twitter',
+      color: '1DA1F2',
+      url: 'https://twitter.com/ArjenBrand',
+    },
+    {
+      name: 'LinkedIn',
+      color: '0077B5',
+      url: 'https://www.linkedin.com/in/arjen-brandenburgh',
+    },
+    {
+      name: 'Website',
+      color: '4285F4',
+      logo: 'google-chrome',
+      url: 'https://www.arjenbrandenburgh.nl',
+    },
+    // {
+    //   name: 'Instagram',
+    //   color: 'E4405F',
+    //   url: 'https://www.instagram.com/username',
+    // },
+    // {
+    //   name: 'Facebook',
+    //   color: '1877F2',
+    //   url: 'https://www.facebook.com/username',
+    // },
+  ],
 github: {
     username: 'saltyseaslug',
     colors: {
@@ -99,7 +138,10 @@ github: {
       background: 'ffffff',
     },
 },
+template: {
+	showHeaderImage: false,
+	
+},
 };
-
 
 module.exports = config;
