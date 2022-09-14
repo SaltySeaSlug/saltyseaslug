@@ -6,8 +6,10 @@ const md = require("markdown-it")({
 const emoji = require("markdown-it-emoji");
 const fs = require("fs");
 const Parser = require("rss-parser");
-
 const parser = new Parser();
+
+
+
 
 const feedUrl = "https://www.mokkapps.de/rss.xml";
 const websiteUrl = "https://www.mokkapps.de";
@@ -40,7 +42,7 @@ md.use(emoji);
       <img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="40" width="170" >
     </a>`;
 
-  const text = `${headerImage}\n\n
+  const text = `${include templates\about-me.md}\n\n{headerImage}\n\n
   ${twitterBadge} ${linkedInBadge} ${instagramBadge} ${mediumBadge} ${devToBadge}\n\n
   [:arrow_right: Check out my website](${websiteUrl})\n\n
   ${buyMeACoffeeButton}\n\n
