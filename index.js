@@ -37,7 +37,7 @@ md.use(emoji);
  
    /* import template pages */
 	const aboutMe = fs.readFileSync('./templates/about-me.md', 'utf8');
-	promises.push(generateBadges());
+	promises.push(await generateBadges());
 
   const headerImage = `<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">`;
   const twitterBadge = `[<img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=${badgeHeight}>](${twitterUrl})`;
