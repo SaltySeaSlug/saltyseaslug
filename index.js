@@ -455,5 +455,5 @@ async function getRefreshDate() {
     timeZone: 'Africa/Johannesburg',
   });
 
-  return Promise.resolve({ refreshDate });
+  return Promise.resolve(refreshDate);
 }
