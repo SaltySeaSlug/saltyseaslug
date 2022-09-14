@@ -68,9 +68,8 @@ const input = "";
  
 var objCount = bad.badges.length;
 for (var x = 0; x < objCount; x++) {
-		var curitem = bad.badges[0];
+		var curitem = bad.badges[0][x];
 		console.log(curitem);
-		console.log(curitem[x]);
 		input += curitem[x].name + ", ";
 }
 
