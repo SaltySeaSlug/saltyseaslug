@@ -72,11 +72,13 @@ const input = "";
 	
  for(let i = 0; i < bad.length; i++) 
  {
-    let obj = bad[0][i];
+    let obj = bad[i];
 	console.log(obj);
 	console.log(bad[i]);
 	input += '<img alt="' + obj.badge.name + '" src="https://img.shields.io/badge/-"' + obj.badge.name + "-" + obj.badge.color + '"?style=flat-square&logo="' + obj.badge.logo + '"&logoColor=white" />';
  }
+ 
+ console.log(input);
 
   const result = aboutMe + "\n" + input + "\n\n" + render;
 	
