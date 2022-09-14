@@ -419,12 +419,13 @@ async function generateBadges() {
 
 function printArray(array)
 {
-	for (var i = 0; i < array.length; i++) {
-  var str = '';
-  for (var j = 0; j <= i; j++) {
-str += array[j];
-  }
-	}
-  
-  return str;
+	let str;
+	for (var i in array) 
+{
+   console.log("row " + i);
+   for (var j in array[i]) 
+     {
+      str += " " + array[i][j];
+     }
+}
 }
