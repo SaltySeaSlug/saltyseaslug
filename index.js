@@ -69,7 +69,7 @@ const input = "";
  for(let i = 0; i < promises.length; i++) 
  {
     let obj = promises[i];
-	input += <img alt=badge.name src='https://img.shields.io/badge/-' + obj.badge.name + '-' + obj.badge.color + '?style=flat-square&logo=' + obj.badge.logo + '&logoColor=white' />
+	input += `<img alt=badge.name src='https://img.shields.io/badge/-' + obj.badge.name + '-' + obj.badge.color + '?style=flat-square&logo=' + obj.badge.logo + '&logoColor=white' />`;
  }
 
   const result = aboutMe + "\n" + input + "\n\n" + render;
