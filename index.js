@@ -1,17 +1,8 @@
+var hljs = require('highlight.js'); // https://highlightjs.org
 const md = require("markdown-it")({
   html: true, // Enable HTML tags in source
   breaks: true, // Convert '\n' in paragraphs into <br>
   linkify: true, // Autoconvert URL-like text to links
-});
-const emoji = require("markdown-it-emoji");
-const fs = require("fs");
-const Parser = require("rss-parser");
-const parser = new Parser();
-
-var hljs = require('highlight.js'); // https://highlightjs.org
-
-// Actual default values
-var md = require('markdown-it')({
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
@@ -22,6 +13,10 @@ var md = require('markdown-it')({
     return ''; // use external default escaping
   }
 });
+const emoji = require("markdown-it-emoji");
+const fs = require("fs");
+const Parser = require("rss-parser");
+const parser = new Parser();
 
 
 const feedUrl = "https://www.mokkapps.de/rss.xml";
