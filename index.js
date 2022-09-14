@@ -51,20 +51,11 @@ md.use(emoji);
   ## Latest Tweets\n
   [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&layout=wide)](https://twitter.com/saltyseaslug)\n
   ## GitHub Stats\n
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-
-<!-- Optionally load a template from a CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css" integrity="sha512-o5v54Kh5PH0dgnf9ei0L+vMRsbm5fvIvnR/XkrZZjN4mqdaeH7PW66tumBoQVIaKNVrLCZiBEfHzRY4JJSMK/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Initialize highlight.js -->
-<script>hljs.initHighlightingOnLoad();</script>
-`;
+  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
   const result = md.render(text);
 
-  fs.writeFile("README.md", result, function (err) {
+  fs.writeFile("README.md", aboutMe + result, function (err) {
     if (err) return console.log(err);
     console.log(`${result} > README.md`);
   });
