@@ -47,9 +47,9 @@ md.use(emoji);
   ## Latest Blog Posts\n
   ${blogPosts}\n
   ## Latest Tweets\n
-  [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=mokkapps&layout=wide)](https://twitter.com/mokkapps)\n
+  [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&layout=wide)](https://twitter.com/saltyseaslug)\n
   ## GitHub Stats\n
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mokkapps&show_icons=true)`;
+  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
   const result = md.render(text);
 
