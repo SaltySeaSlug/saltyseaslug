@@ -1,4 +1,4 @@
-const config = require('config.js');
+const config = require('./config.js');
 
 
 const md = require("markdown-it")({
@@ -399,7 +399,6 @@ if (typeof module !== 'undefined') {
 
 
 async function generateBadges() {
-  const config = require('./config.js');
   const colors = new Rainbow();
   colors.setNumberRange(1, config.badges.list.length);
   colors.setSpectrum(...config.badges.spectrum);
