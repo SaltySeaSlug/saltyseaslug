@@ -57,13 +57,7 @@ md.use(highlight);
 
   const result = md.render(text);
 
-  fs.writeFile("README.md", result + "<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-
-<!-- Optionally load a template from a CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css" integrity="sha512-o5v54Kh5PH0dgnf9ei0L+vMRsbm5fvIvnR/XkrZZjN4mqdaeH7PW66tumBoQVIaKNVrLCZiBEfHzRY4JJSMK/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Initialize highlight.js -->
-<script>hljs.initHighlightingOnLoad();</script>", function (err) {
+  fs.writeFile("README.md", result, function (err) {
     if (err) return console.log(err);
     console.log(`${result} > README.md`);
   });
