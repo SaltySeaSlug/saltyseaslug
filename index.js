@@ -64,9 +64,13 @@ md.use(emoji);
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
   const render = md.render(text);
-  	 const input = await Promise.all(promises).then(data =>
-    data.reduce((acc, val) => ({ ...acc, ...val }))
-  );
+ const input;
+ 
+ for(let i = 0; i < promises.length; i++) 
+ {
+    let obj = promises[i];
+	input += <img alt=badge.name src='https://img.shields.io/badge/-' + obj.badge.name + '-' + obj.badge.color + '?style=flat-square&logo=' + obj.badge.logo + '&logoColor=white' />
+ }
 
   const result = aboutMe + "\n" + input + "\n\n" + render;
 	
