@@ -54,7 +54,7 @@ md.use(emoji);
   ## GitHub Stats\n
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
-  var rend = md1.renderInline(aboutMe);
+  var rend = md1.render(aboutMe);
   const result = md.render(text);
 
   fs.writeFile("README.md", rend + result, function (err) {
