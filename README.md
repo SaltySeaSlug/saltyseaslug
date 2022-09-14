@@ -22,3 +22,5 @@ Console.WriteLine($"{position}, currently based in {location}.");
 <p><a href="https://twitter.com/saltyseaslug"><img src="https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&amp;layout=wide" alt="github-readme-twitter"></a></p>
 <h2>GitHub Stats</h2>
 <p><img src="https://github-readme-stats.vercel.app/api?username=saltyseaslug&amp;show_icons=true&amp;theme=dracula" alt="GitHub Stats"></p>
+<p align="center">This README file is automatically generated every day! The last refresh was on [object Object].<br/></p>
+					<p align="center"><img src="https://github.com/'+ config.github.username +'/'+ config.github.username +'/workflows/README%20build/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/'+ config.github.username +'/'+ config.github.username +'?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/'+ config.github.username +'/'+ config.github.username +'?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/'+ config.github.username +'" alt="Profile views"/></p>
