@@ -46,6 +46,9 @@ md.use(emoji);
 	const devToBadge = `[<img src="https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev-dot-to&logoColor=white" height=${badgeHeight}>](${devToUrl})`;
     const buyMeACoffeeButton = `<a href="https://www.buymeacoffee.com/mokkapps" target="_blank" rel="noreferrer nofollow"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="40" width="170" ></a>`;
 
+
+if (config.badges && config.badges.enabled)
+{
   	input = '';
 	const badges = getFields(await generateBadges());
 
@@ -53,7 +56,7 @@ md.use(emoji);
 	{
 		input += '<img alt="' + badges[i].name + '" src="https://img.shields.io/badge/-' + badges[i].name + "-" + badges[i].color + '?style=flat-square&logo=' + badges[i].logo + '&logoColor=white" />';
 	}
-
+}
 
 
   const text = `${input}\n\n${headerImage}\n\n
