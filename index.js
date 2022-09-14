@@ -75,6 +75,7 @@ if (config.social)
 	
 	for (var i in social)
 	{
+		console.log(social[i]);
 		socialResult += `[<img src="https://img.shields.io/badge/${social[i].name}-%231DA1F2.svg?&style=for-the-badge&logo=${social[i].logo}&logoColor=white" height=${badgeHeight}>](${social[i].url})`;
 	}
 	
@@ -458,9 +459,7 @@ async function generateBadges() {
 
 async function getSocialData() {
   const social = config.social.map((item) => ({
-    name: item.name,
-	color: item.color,
-	url: item.url,
+    ...item,
     logo: item.logo || item.name,
   }));
   return Promise.resolve(social);
