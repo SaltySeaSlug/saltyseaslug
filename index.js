@@ -67,22 +67,19 @@ const input = "";
  let bad = await generateBadges();
  
  	console.log(bad);
-	 	console.log(JSON.stringify(bad));
+	console.log(JSON.stringify(bad));
 
 	
  for(let i = 0; i < bad.length; i++) 
  {
     let obj = bad[0][i];
+	console.log(obj);
+	console.log(bad[i]);
 	input += '<img alt="' + obj.badge.name + '" src="https://img.shields.io/badge/-"' + obj.badge.name + "-" + obj.badge.color + '"?style=flat-square&logo="' + obj.badge.logo + '"&logoColor=white" />';
  }
 
   const result = aboutMe + "\n" + input + "\n\n" + render;
 	
-	
-
-	console.log(result);
-
-
   fs.writeFile("README.md", result, function (err) {
     if (err) return console.log(err);
     console.log(`${result} > README.md`);
