@@ -2,7 +2,7 @@
 const config = {
 badges: {
 	heading: "### Technologies | Tools ",
-    enabled: false,
+    enabled: true,
     spectrum: ['46a2f1', '311C87', 'DD0031'],
     list: [
       {
