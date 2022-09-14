@@ -8,7 +8,8 @@ const string location = "Cape Town, South Africa";
 
 Console.WriteLine("I'm {0} a {1}.", name, declaration);
 Console.WriteLine($"{position}, currently based in {location}.");
-```<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">
+```
+<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">
 <pre><code class="language-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
 
 string name = &quot;Mark&quot;;
