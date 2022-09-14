@@ -1,3 +1,6 @@
+const config = require('./config.js');
+
+
 const md = require("markdown-it")({
   html: true, // Enable HTML tags in source
   breaks: true, // Convert '\n' in paragraphs into <br>
@@ -398,7 +401,7 @@ async function generateBadges() {
   colors.setNumberRange(1, 10);
   colors.setSpectrum(['46a2f1', '311C87', 'DD0031', '43853d']);
 
-  const formattedBadges = CONFIG.badges.list.map((badge, index) => ({
+  const formattedBadges = config.badges.list.map((badge, index) => ({
     name: badge.name,
     logo: badge.logo || badge.name.toLocaleLowerCase(),
     color: colors.colourAt(index),
