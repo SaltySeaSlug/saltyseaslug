@@ -90,7 +90,7 @@ badges: {
       },
     ],
   },
-   social: [
+social: [
     {
       name: 'Medium',
       color: '12100E',
@@ -128,7 +128,7 @@ badges: {
     //   color: '1877F2',
     //   url: 'https://www.facebook.com/username',
     // },
-  ],
+],
 github: {
     username: 'saltyseaslug',
     colors: {

@@ -69,7 +69,7 @@ if (config.badges && config.badges.enabled)
 	textToRender += `${badgesResult}\n\n`;
 }
 
-if (config.social && config.social.enabled)
+if (config.social)
 {
 	const social = getFields(await getSocialData());
 	
