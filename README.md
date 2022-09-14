@@ -1,4 +1,14 @@
-<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">
+``` csharp
+Console.WriteLine("Hello, World!");
+
+string name = "Mark";
+string declaration = "self-taught self-proclaimed full-stack developer";
+const string position = "Senior Analyst Programmer";
+const string location = "Cape Town, South Africa";
+
+Console.WriteLine("I'm {0} a {1}.", name, declaration);
+Console.WriteLine($"{position}, currently based in {location}.");
+```<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">
 <pre><code class="language-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
 
 string name = &quot;Mark&quot;;
@@ -23,8 +33,3 @@ Console.WriteLine($&quot;{position}, currently based in {location}.&quot;);
 <p><a href="https://twitter.com/saltyseaslug"><img src="https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&amp;layout=wide" alt="github-readme-twitter"></a></p>
 <h2>GitHub Stats</h2>
 <p><img src="https://github-readme-stats.vercel.app/api?username=saltyseaslug&amp;show_icons=true" alt="GitHub Stats"></p>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-<!-- Optionally load a template from a CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css" integrity="sha512-o5v54Kh5PH0dgnf9ei0L+vMRsbm5fvIvnR/XkrZZjN4mqdaeH7PW66tumBoQVIaKNVrLCZiBEfHzRY4JJSMK/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- Initialize highlight.js -->
-<script>hljs.initHighlightingOnLoad();</script>
