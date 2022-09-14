@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">
+<code>csharp Console.WriteLine(&quot;Hello, World!&quot;);  string name = &quot;Mark&quot;; string declaration = &quot;self-taught self-proclaimed full-stack developer&quot;; const string position = &quot;Senior Analyst Programmer&quot;; const string location = &quot;Cape Town, South Africa&quot;;  Console.WriteLine(&quot;I'm {0} a {1}.&quot;, name, declaration); Console.WriteLine($&quot;{position}, currently based in {location}.&quot;); </code><img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">
 <pre><code class="language-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
 
 string name = &quot;Mark&quot;;
