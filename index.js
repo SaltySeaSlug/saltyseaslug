@@ -398,8 +398,8 @@ if (typeof module !== 'undefined') {
 
 async function generateBadges() {
   const colors = new Rainbow();
-  colors.setNumberRange(1, 10);
-  colors.setSpectrum(['46a2f1', '311C87', 'DD0031', '43853d']);
+  colors.setNumberRange(1, config.badges.list.length);
+  colors.setSpectrum(...config.badges.spectrum);
 
   const formattedBadges = config.badges.list.map((badge, index) => ({
     name: badge.name,
