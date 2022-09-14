@@ -64,7 +64,7 @@ md.use(emoji);
   const render = md.render(text);
 const input = "";
  
- let bad = await generateBadges();
+ const bad = await generateBadges();
  
  	console.log(bad);
 	console.log(JSON.stringify(bad));
