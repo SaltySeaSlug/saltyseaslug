@@ -75,7 +75,7 @@ if (config.social)
 	
 	for (var i in social)
 	{
-		socialResult += `[<img src="https://img.shields.io/badge/${social[i].name}-%231DA1F2.svg?&style=for-the-badge&logo=${social[i].logo}&logoColor=white" height=${badgeHeight}>](${social[i].url})`;
+		socialResult += `[<img src="https://img.shields.io/badge/${social[i].item.name}-%231DA1F2.svg?&style=for-the-badge&logo=${social[i].logo}&logoColor=white" height=${badgeHeight}>](${social[i].item.url})`;
 	}
 	
 	textToRender += `${socialResult}\n\n`;
