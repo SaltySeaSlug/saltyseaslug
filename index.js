@@ -8,6 +8,20 @@ const fs = require("fs");
 const Parser = require("rss-parser");
 const parser = new Parser();
 
+var hljs = require('highlight.js'); // https://highlightjs.org
+
+// Actual default values
+var md = require('markdown-it')({
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(str, { language: lang }).value;
+      } catch (__) {}
+    }
+
+    return ''; // use external default escaping
+  }
+});
 
 
 const feedUrl = "https://www.mokkapps.de/rss.xml";
