@@ -67,11 +67,9 @@ const input = "";
  const bad = await generateBadges();
  
 	
- for(let i = 0; i < bad[0].length; i++) 
+ for(var obj in bad) 
  {
-    let obj = bad[i];
 	console.log(obj);
-	console.log(bad[i]);
 	input += '<img alt="' + obj.name + '" src="https://img.shields.io/badge/-"' + obj.name + "-" + obj.color + '"?style=flat-square&logo="' + obj.logo + '"&logoColor=white" />';
  }
  
