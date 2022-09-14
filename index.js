@@ -66,8 +66,8 @@ const input = "";
  
  const bad = await generateBadges();
  
-const result = getFields(bad, 'name');
-console.log(result);
+const result1 = getFields(bad, 'name');
+console.log(result1);
 
 
  /*for(var obj in bad) 
