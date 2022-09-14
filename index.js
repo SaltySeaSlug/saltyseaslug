@@ -64,7 +64,12 @@ md.use(emoji);
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
   const render = md.render(text);
-  const result = aboutMe + "\n" + JSON.stringify(promises) + "\n\n" + render;
+  	 const input = await Promise.all(promises).then(data =>
+    data.reduce((acc, val) => ({ ...acc, ...val }))
+  );
+
+  const result = aboutMe + "\n" + input + "\n\n" + render;
+	
 	
 	console.log(promises);
 	console.log(printArray(promises));
