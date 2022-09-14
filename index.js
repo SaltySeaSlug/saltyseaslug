@@ -36,6 +36,7 @@ md.use(emoji);
  
    /* import template pages */
 	const aboutMe = fs.readFileSync('./templates/about-me.md', 'utf8');
+	const githubStats = fs.readFileSync('./templates/github-stats.md', 'utf8');
 
 	const headerImage = `<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">`;
 	const twitterBadge = `[<img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=${badgeHeight}>](${twitterUrl})`;
@@ -64,7 +65,7 @@ md.use(emoji);
   ## Latest Tweets\n
   [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&layout=wide)](https://twitter.com/saltyseaslug)\n
   ## GitHub Stats\n
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
+  ${githubStats}`;
 
   const render = md.render(text);
 
@@ -74,8 +75,6 @@ md.use(emoji);
 	input += '<img alt="' + obj.name + '" src="https://img.shields.io/badge/-"' + obj.name + "-" + obj.color + '"?style=flat-square&logo="' + obj.logo + '"&logoColor=white" />';
  }*/
  
- console.log(input);
-
   const result = aboutMe + "\n\n" + render;
 	
   fs.writeFile("README.md", result, function (err) {
