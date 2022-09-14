@@ -2,7 +2,7 @@
 const config = {
 badges: {
     enabled: true,
-    spectrum: ['46a2f1', '311C87', 'DD0031', '43853d'],
+    spectrum: ['46a2f1', '311C87', 'DD0031'],
     list: [
       {
         name: 'Angular',
