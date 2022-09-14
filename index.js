@@ -66,19 +66,8 @@ const input = "";
  
  const bad = await generateBadges();
  
-var objCount = bad.badges.length;
-for (var x = 0; x < objCount; x++) {
-	
-	console.log(objCount);
-	console.log(bad.badges[x]);
-	
-	for (var i in bad.badges[0])
-	{
-		var curitem = bad.badges[0][i];
-		console.log(curitem);
-		input += curitem[x].name + ", ";
-	}
-}
+const result = getFields(bad, 'name');
+console.log(result);
 
 
  /*for(var obj in bad) 
@@ -115,7 +104,9 @@ async function loadBlogPosts() {
 }
 
 
-
+function getFields(array, field) {
+    return array.map(a => a[field]);
+}
 
 function Rainbow()
 {
@@ -434,7 +425,7 @@ async function generateBadges() {
     color: colors.colourAt(index),
   }));
 
-  return Promise.resolve({ badges: formattedBadges });
+  return Promise.resolve(formattedBadges);
 }
 
 function printArray(array)
