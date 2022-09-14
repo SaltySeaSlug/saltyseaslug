@@ -64,7 +64,7 @@ md.use(emoji);
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
   const render = md.render(text);
-  const result = aboutMe + "\n" + printArray(promises[0].badges) + "\n\n" + render;
+  const result = aboutMe + "\n" + JSON.stringify(promises) + "\n\n" + render;
 	
 	console.log(promises);
 	console.log(printArray(promises));
