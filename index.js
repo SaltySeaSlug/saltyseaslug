@@ -64,7 +64,7 @@ md.use(emoji);
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true)`;
 
   const render = md.render(text);
-  const result = aboutMe + "\n" + promises + "\n\n" + render;
+  const result = aboutMe + "\n" + printArray(promises) + "\n\n" + render;
 
   fs.writeFile("README.md", result, function (err) {
     if (err) return console.log(err);
@@ -410,4 +410,16 @@ async function generateBadges() {
   }));
 
   return Promise.resolve({ badges: formattedBadges });
+}
+
+function printArray(array)
+{
+	for (var i = 0; i < array.length; i++) {
+  var str = '';
+  for (var j = 0; j <= i; j++) {
+    if (array[j] == 'E') str += '3';
+    else str += array[j];
+  }
+  
+  return str;
 }
