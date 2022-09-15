@@ -27,10 +27,10 @@ Console.WriteLine($"{position}, currently based in {location}.");
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
   <!--STAT-START-->
-    <img src="https://github-readme-stats-gilt-sigma.vercel.app/api?username=SaltySeaSlug&show_icons=true&theme=dracula&count_private=true&hide_title=true"/>
+    <img width="55%" src="https://github-readme-stats-gilt-sigma.vercel.app/api?username=SaltySeaSlug&show_icons=true&theme=dracula&count_private=true&hide_title=true"/>
   <!--STAT-END-->
   <!--TOP-START-->
-    <img src="https://github-readme-stats-gilt-sigma.vercel.app/api/top-langs/?username=SaltySeaSlug&theme=dracula&langs_count=8&layout=compact$hide_title=true" />
+    <img width="47%" src="https://github-readme-stats-gilt-sigma.vercel.app/api/top-langs/?username=SaltySeaSlug&theme=dracula&langs_count=8&layout=compact&hide_title=true" />
   <!--TOP-END-->
   </div>
 </div>
