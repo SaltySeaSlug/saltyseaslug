@@ -21,7 +21,9 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 ## Certificates
-<!--START_SECTION:badges--> <!--END_SECTION:badges-->
+<!--START_SECTION:badges-->
+[![Microsoft Certified: Azure Fundamentals](https://images.credly.com/size/110x110/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png)](http://www.credly.com/badges/e43c456d-c964-4cc6-93ab-3c1b3e9d7f39 "Microsoft Certified: Azure Fundamentals")
+<!--END_SECTION:badges-->
 
 
 ## Stats
