@@ -26,13 +26,13 @@ badges: {
         name: 'MongoDB',
       },
       {
-        name: 'mysql',
+        name: 'MySql',
       },
       {
-        name: 'sqlite',
+        name: 'Sqlite',
       },
       {
-        name: 'microsoft sql server',
+        name: 'Microsoft Sql Server',
       },
       {
         name: 'Postgres',
@@ -51,7 +51,7 @@ badges: {
         name: 'CodeIgniter',
       },
       {
-        name: 'jquery',
+        name: 'Jquery',
       },
       {
         name: 'npm',
@@ -94,25 +94,26 @@ badges: {
         logo: 'visual-studio',
       },
       {
-        name: 'c-sharp',
+        name: 'C#',
+        logo: 'c-sharp',
       },
       {
-        name: 'css3',
+        name: 'CSS3',
       },
       {
-        name: 'html5',
+        name: 'HTML5',
       },
       {
-        name: 'javascript',
+        name: 'Javascript',
       },
       {
-        name: 'markdown',
+        name: 'Markdown',
       },
       {
-        name: 'php',
+        name: 'PHP',
       },
       {
-        name: 'powershell',
+        name: 'PowerShell',
       },
       {
         name: 'Bash',
@@ -127,48 +128,48 @@ badges: {
         logo: 'microsoft-office',
       },
       {
-        name: 'linux',
+        name: 'Linux',
       },
       {
-        name: 'windows',
+        name: 'Windows',
       },
       {
-        name: 'arduino',
+        name: 'Arduino',
       },
       {
-        name: 'docker',
+        name: 'Docker',
       },
       {
         name: 'Pi Hole',
         logo: 'pi-hole',
       },
       {
-        name: 'postman',
+        name: 'Postman',
       },
       {
         name: 'Raspberry Pi',
         logo: 'raspberry-pi',
       },
       {
-        name: 'swagger',
+        name: 'Swagger',
       },
       {
-        name: 'trello',
+        name: 'Trello',
       },
       {
-        name: 'google',
+        name: 'Google',
       },
       {
-        name: 'apache',
+        name: 'Apache',
       },
       {
-        name: 'nginx',
+        name: 'Nginx',
       },
       {
-        name: 'git',
+        name: 'Git',
       },
       {
-        name: 'github',
+        name: 'Github',
       },
     ],
   },
