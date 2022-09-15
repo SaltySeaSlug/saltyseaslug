@@ -1,6 +1,5 @@
 const config = require('./config.js');
 
-
 const md = require("markdown-it")({
   html: true, // Enable HTML tags in source
   breaks: true, // Convert '\n' in paragraphs into <br>
@@ -12,136 +11,7 @@ const fs = require("fs");
 const Parser = require("rss-parser");
 const parser = new Parser();
 
-
-const feedUrl = "https://www.mokkapps.de/rss.xml";
-const websiteUrl = "https://www.mokkapps.de";
-const twitterUrl = "https://www.twitter.com/mokkapps";
-const linkedInUrl = "https://www.linkedin.com/in/mokkapps";
-const instagramUrl = "https://www.instagram.com/mokkapps/";
-const mediumUrl = "https://medium.com/@MokkappsDev";
-const devToUrl = "https://dev.to/mokkapps";
-const blogPostLimit = 5;
-const badgeHeight = "25";
-
 md.use(emoji);
-
-(async () => {
-  let blogPosts = "";
-  try {
-    blogPosts = await loadBlogPosts();
-  } catch (e) {
-    console.error(`Failed to load blog posts from ${websiteUrl}`, e);
-  }
-
-  	let badgesResult = '';
-	let socialResult = '';
-	let textToRender = '';
- 
-	let refreshDate = await getRefreshDate();
-  
-	/* import template pages */
-	const aboutMe = fs.readFileSync('./templates/about-me.md', 'utf8');
-	const githubStats = fs.readFileSync('./templates/github-stats.md', 'utf8');
-
-	const headerImage = `<img src="https://i.imgur.com/RK1kR8g.png" alt="Mokkapps GitHub README header image">`;
-	const twitterBadge = `[<img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" height=${badgeHeight}>](${twitterUrl})`;
-	const linkedInBadge = `[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height=${badgeHeight}>](${linkedInUrl})`;
-	const instagramBadge = `[<img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" height=${badgeHeight}>](${instagramUrl})`;
-	const mediumBadge = `[<img src="https://img.shields.io/badge/medium-%2312100E.svg?&style=for-the-badge&logo=medium&logoColor=white" height=${badgeHeight}>](${mediumUrl})`;
-	const devToBadge = `[<img src="https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev-dot-to&logoColor=white" height=${badgeHeight}>](${devToUrl})`;
-    const buyMeACoffeeButton = `<a href="https://www.buymeacoffee.com/mokkapps" target="_blank" rel="noreferrer nofollow"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="40" width="170" ></a>`;
-	const footer = `<hr><p align="center">This README file is automatically generated every day! The last refresh was on ${refreshDate}.<br/></p>
-					<p align="center"><img src="https://github.com/${config.github.username}/${config.github.username}/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/${config.github.username}/${config.github.username}?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/${config.github.username}/${config.github.username}?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/${config.github.username}" alt="Profile views"/></p>`;
-
-
-
-if (config.badges && config.badges.enabled)
-{
-	const badges = getFields(await generateBadges());
-
-	badgesResult += config.badges.heading + "\n\n";
-	
-	for (var i in badges)
-	{
-		badgesResult += '<img alt="' + badges[i].name + '" src="https://img.shields.io/badge/-' + badges[i].name + "-" + badges[i].color + '?style=flat-square&logo=' + badges[i].logo + '&logoColor=white" />';
-	}
-	
-	textToRender += `${badgesResult}\n\n`;
-}
-
-if (config.social)
-{
-	const social = getField(await getSocialData());
-	
-	for (var i in social)
-	{
-		console.log(social[i]);
-		console.log(social[i][0].name);
-		console.log(social[i].name);
-		socialResult += `[<img src="https://img.shields.io/badge/${social[i].name}-%231DA1F2.svg?&style=for-the-badge&logo=${social[i].logo}&logoColor=white" height=${badgeHeight}>](${social[i].url})`;
-	}
-	
-	textToRender += `${socialResult}\n\n`;
-}
-
-if (config.template.showHeaderImage)
-{
-	textToRender += `${headerImage}\n\n`;
-}
-
-
-  textToRender += `
-  ${twitterBadge} ${linkedInBadge} ${instagramBadge} ${mediumBadge} ${devToBadge}\n\n
-  [:arrow_right: Check out my website](${websiteUrl})\n\n
-  ${buyMeACoffeeButton}\n\n
-  ## Latest Blog Posts\n
-  ${blogPosts}\n
-  ## Latest Tweets\n
-  [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=saltyseaslug&layout=wide)](https://twitter.com/saltyseaslug)\n
-  ## GitHub Stats\n
-  ${githubStats}\n${footer}`;
-
-  const render = md.render(textToRender);
-
- /*for(var obj in bad) 
- {
-	console.log(obj);
-	input += '<img alt="' + obj.name + '" src="https://img.shields.io/badge/-"' + obj.name + "-" + obj.color + '"?style=flat-square&logo="' + obj.logo + '"&logoColor=white" />';
- }*/
- 
-  const result = aboutMe + "\n\n" + render;
-	
-  fs.writeFile("README.md", result, function (err) {
-    if (err) return console.log(err);
-    console.log(`${result} > README.md`);
-  });
-})();
-
-async function loadBlogPosts() {
-  const feed = await parser.parseURL(feedUrl);
-
-  let links = "";
-
-  feed.items.slice(0, blogPostLimit).forEach((item) => {
-    links += `<li><a href=${item.link}>${item.title}</a></li>`;
-  });
-
-  return `
-  <ul>
-    ${links}
-  </ul>\n
-  [:arrow_right: More blog posts](${websiteUrl}/blog)
-  `;
-}
-
-
-function getFields(array) {
-    return array.map(({name,logo,color}) =>  ({name,logo,color}));
-}
-function getField(array) {
-    return array.map(({item}) => ({item}));
-}
-
 
 function Rainbow()
 {
@@ -449,38 +319,108 @@ if (typeof module !== 'undefined') {
 
 
 
+
+
+
+
 async function generateBadges() {
   const colors = new Rainbow();
-  colors.setNumberRange(1, config.badges.list.length);
-  colors.setSpectrum(...config.badges.spectrum);
+  colors.setNumberRange(1, CONFIG.badges.list.length);
+  colors.setSpectrum(...CONFIG.badges.spectrum);
 
-  const formattedBadges = config.badges.list.map((badge, index) => ({
+  const formattedBadges = CONFIG.badges.list.map((badge, index) => ({
     name: badge.name,
     logo: badge.logo || badge.name.toLocaleLowerCase(),
     color: colors.colourAt(index),
   }));
 
-  return Promise.resolve(formattedBadges);
-}
-
-async function getSocialData() {
-  const social = config.social.map((item) => ({
-    ...item,
-    logo: item.logo || item.name,
-  }));
-  return Promise.resolve(social);
+  return Promise.resolve({ badges: formattedBadges });
 }
 
 async function getRefreshDate() {
-  const refreshDate = new Date().toLocaleDateString('en-ZA', {
+  const refreshDate = new Date().toLocaleDateString('en-GB', {
     weekday: 'long',
     month: 'long',
     day: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
     timeZoneName: 'short',
-    timeZone: 'Africa/Johannesburg',
+    timeZone: 'Europe/Stockholm',
   });
 
-  return Promise.resolve(refreshDate);
+  return Promise.resolve({ refreshDate });
 }
+
+async function getGithubData() {
+  const data = CONFIG.github;
+  const enabled =
+    data.stats.mostUsedLanguages ||
+    data.stats.overallStats ||
+    data.highlightedRepos.length > 0;
+
+  const github = {
+    ...data,
+    enabled,
+  };
+
+  return Promise.resolve({ github });
+}
+
+async function generateReadMe(input) {
+	
+	const result = md.render(input);
+	fs.writeFile("README.md", result, function (err) {
+		if (err) return console.log(err);
+		console.log(`${result} > README.md`);
+  });
+}
+
+async function perform() {
+  let promises = [];
+
+  // Medium articles
+  //if (CONFIG.mediumArticles && CONFIG.mediumArticles.enabled) {
+  //  promises.push(getMediumArticles());
+  //}
+
+  // Badges
+  if (config.badges && config.badges.enabled) {
+		promises.push(generateBadges());
+  }
+
+  // Refresh date
+  promises.push(getRefreshDate());
+
+  // Github data
+  promises.push(getGithubData());
+
+  // Social data
+  promises.push(getSocialData());
+
+  // Get Instagram images
+  //if (CONFIG.instagram && CONFIG.instagram.enabled) {
+  //  promises.push(getInstagramPosts());
+  //}
+
+  const input = await Promise.all(promises).then(data =>
+    data.reduce((acc, val) => ({ ...acc, ...val }))
+  );
+  
+	let badgesResult = '';
+	
+	for (var i in input.badges)
+	{
+		console.log(input.badges[i]);
+		console.log(input.badges[i].name);
+		console.log(input.badges[i].color);
+		
+		badgesResult += '<img alt="' + badges[i].name + '" src="https://img.shields.io/badge/-' + badges[i].name + "-" + badges[i].color + '?style=flat-square&logo=' + badges[i].logo + '&logoColor=white" />';
+		
+	}
+	
+  console.log(`✅ README.md has been succesfully built!`);
+
+  generateReadMe(input);
+}
+
+perform();
