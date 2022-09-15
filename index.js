@@ -116,7 +116,11 @@ async function perform() {
     data.reduce((acc, val) => ({ ...acc, ...val }))
   );
   
-	input += fs.readFileSync('./templates/about-me.md').toString()
+	let aboutPage = fs.readFileSync('./templates/about-me.md');
+	let stats = fs.readFileSync('./templates/github-stats.md');
+	let footer = fs.readFileSync('./templates/footer.md');
+	
+	input += aboutPage.toString()
 				.replace("{{welcome}}", config.template.aboutMe.welcome)
 				.replace("{{name}}", config.template.aboutMe.name)
 				.replace("{{declaration}}", config.template.aboutMe.declaration)
@@ -130,13 +134,13 @@ async function perform() {
 
 	input += "\n\n";
 	input += "## Stats<hr>";
-	input += fs.readFileSync('./templates/github-stats.md').toString()
-					.replaceAll("{{username}}", config.github.username);
+	input += stats.toString()
+				.replaceAll("{{username}}", config.github.username);
 
 	input += "\n\n";
-	input += fs.readFileSync('./templates/footer.md').toString()
-					.replace("{{refreshDate}}", data.refreshDate)
-					.replaceAll("{{username}}", config.github.username);
+	input += footer.toString()
+				.replace("{{refreshDate}}", data.refreshDate)
+				.replaceAll("{{username}}", config.github.username);
 	
   console.log(`✅ README.md has been succesfully built!`);
 
