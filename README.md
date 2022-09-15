@@ -19,16 +19,12 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 
-<!--START_SECTION:badges-->
-[![Microsoft Certified: Azure Fundamentals](https://images.credly.com/size/110x110/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png)](http://www.credly.com/badges/e43c456d-c964-4cc6-93ab-3c1b3e9d7f39 "Microsoft Certified: Azure Fundamentals")
-<!--END_SECTION:badges-->
-
-<h2>Stats<div align="center"></h2>
+undefined<h2>Stats<div align="center"></h2>
   <div style="display: flex; align-items: flex-start;">
     <img src="https://github-readme-stats.vercel.app/api?username=saltyseaslug&show_icons=true&theme=dracula&count_private=true&hide_title=true"/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saltyseaslug&theme=dracula&langs_count=8&layout=compact$hide_title=true" />
   </div>
 </div>
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Thursday, 15 September, 16:36 CEST.<br/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Thursday, 15 September, 16:42 CEST.<br/></p>
 <p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/saltyseaslug" alt="Profile views"/></p>
