@@ -76,11 +76,11 @@ async function getGithubData() {
   return Promise.resolve({ github });
 }
 
-async function generateReadMe(input, aboutMe, badges) {
+async function generateReadMe(input, aboutMe, skills, badges) {
 	
 	const result = md.render(input);
 
-	fs.writeFile("README.md", aboutMe + "\n\n" + badges + "\n\n<!--START_SECTION:badges--> <!--END_SECTION:badges-->\n\n" + result, function (err) {
+	fs.writeFile("README.md", aboutMe + skills + badges + result, function (err) {
 		if (err) return console.log(err);
 		console.log(`${result} > README.md`);
   });
@@ -117,7 +117,9 @@ async function perform() {
     data.reduce((acc, val) => ({ ...acc, ...val }))
   );
   
-	let aboutPage = fs.readFileSync('./templates/about-me.md');
+	let aboutPage = fs.readFileSync('./templates/about-me.md') + "\n\n";
+	let skillsSection = "## Tools and Technologies\n" + buildBadges(data.badges) + "\n\n";
+	let badgesSection = "## Certificates\n\n<!--START_SECTION:badges--> <!--END_SECTION:badges-->\n\n";
 	let stats = fs.readFileSync('./templates/github-stats.md');
 	let footer = fs.readFileSync('./templates/footer.md');
 	
@@ -142,7 +144,7 @@ async function perform() {
 	
   console.log(`✅ README.md has been succesfully built!`);
 
-  generateReadMe(input, about, "## Tools and Technologies\n" + buildBadges(data.badges));
+  generateReadMe(input, about, skillsSection);
 }
 
 function buildBadges(data)
