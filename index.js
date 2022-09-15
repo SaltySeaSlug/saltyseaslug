@@ -427,7 +427,7 @@ async function perform() {
 		
 	}
 	
-	badgesResult += `<hr><p align="center">This README file is automatically generated every day! The last refresh was on ${refreshDate}.<br/></p>
+	badgesResult += `<hr><p align="center">This README file is automatically generated every day! The last refresh was on ${input.refreshDate}.<br/></p>
 					<p align="center"><img src="https://github.com/${config.github.username}/${config.github.username}/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/${config.github.username}/${config.github.username}?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/${config.github.username}/${config.github.username}?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/${config.github.username}" alt="Profile views"/></p>`;
 
 
