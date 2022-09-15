@@ -1,10 +1,10 @@
 ``` csharp
-Console.WriteLine("Hello, World!");
+Console.WriteLine("{{welcome}}");
 
-string name = "Mark";
-string declaration = "self-taught self-proclaimed full-stack developer";
-const string position = "Senior Analyst Programmer";
-const string location = "Cape Town, South Africa";
+string name = "{{name}}";
+string declaration = "{{declaration}}";
+const string position = "{{position}}";
+const string location = "{{location}}";
 
 Console.WriteLine("I'm {0} a {1}.", name, declaration);
 Console.WriteLine($"{position}, currently based in {location}.");

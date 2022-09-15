@@ -1,7 +1,6 @@
 // config.js
 const config = {
 badges: {
-	heading: "## Technologies | Tools ",
     enabled: true,
     spectrum: ['46a2f1', '311C87', 'DD0031'],
     list: [
@@ -98,9 +97,9 @@ social: [
     },
     {
       name: 'Github',
-      username: 'arjenbrandenburgh',
+      username: 'saltyseaslug',
       color: '12100E',
-      url: 'https://github.com/arjenbrandenburgh',
+      url: 'https://github.com/saltyseaslug',
     },
     {
       name: 'Twitter',
@@ -129,7 +128,7 @@ social: [
     //   url: 'https://www.facebook.com/username',
     // },
 ],
-github: {
+ github: {
     username: 'saltyseaslug',
     colors: {
       title: '24292e',
@@ -137,10 +136,21 @@ github: {
       icon: '24292e',
       background: 'ffffff',
     },
-},
+    stats: {
+      mostUsedLanguages: true,
+      overallStats: true,
+    },
+    highlightedRepos: ['saltyseaslug'],
+  },
 template: {
 	showHeaderImage: false,
-	
+	aboutMe: {
+    welcome: "Hello, World!",
+    name: "Mark",
+    declaration: "self-taught self-proclaimed full-stack developer",
+    position: "Senior Analyst Programmer",
+    location: "Cape Town, South Africa"
+  },
 },
 };
 

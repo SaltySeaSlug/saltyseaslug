@@ -1,7 +1,7 @@
 {
-  "name": "mokkapps",
+  "name": "SaltySeaSlug",
   "version": "1.0.0",
-  "description": "<!-- **Mokkapps/mokkapps** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
+  "description": "This `README.md` (this file) appears on your GitHub profile.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mokkapps/mokkapps.git"
+    "url": "git+https://github.com/SaltySeaSlug/saltyseaslug.git"
   },
-  "author": "",
+  "author": "Mark Cockbain",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mokkapps/mokkapps/issues"
+    "url": "https://github.com/SaltySeaSlug/saltyseaslug/issues"
   },
-  "homepage": "https://github.com/Mokkapps/mokkapps#readme",
+  "homepage": "https://github.com/SaltySeaSlug/saltyseaslug#readme",
   "dependencies": {
+    "highlight.js": "^11.6.0",
     "markdown-it": "^11.0.0",
     "markdown-it-emoji": "^1.4.0",
     "prettier": "^2.0.5",

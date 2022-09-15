@@ -1,17 +1,180 @@
 const config = require('./config.js');
-
+const hljs = require('highlight.js');
 const md = require("markdown-it")({
   html: true, // Enable HTML tags in source
   breaks: true, // Convert '\n' in paragraphs into <br>
   linkify: true, // Autoconvert URL-like text to links
-});
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(str, { language: lang }).value;
+      } catch (__) {}
+    }
 
+    return ''; // use external default escaping
+  }
+});
 const emoji = require("markdown-it-emoji");
 const fs = require("fs");
 const Parser = require("rss-parser");
 const parser = new Parser();
-
 md.use(emoji);
+
+
+
+let input = '';
+
+
+async function getSocialData() {
+  const social = config.social.map(item => ({
+    ...item,
+    logo: item.logo || item.name,
+  }));
+  return Promise.resolve({ social });
+}
+
+async function generateBadges() {
+  const colors = new Rainbow();
+  colors.setNumberRange(1, config.badges.list.length);
+  colors.setSpectrum(...config.badges.spectrum);
+
+  const formattedBadges = config.badges.list.map((badge, index) => ({
+    name: badge.name,
+    logo: badge.logo || badge.name.toLocaleLowerCase(),
+    color: colors.colourAt(index),
+  }));
+
+  return Promise.resolve({ badges: formattedBadges });
+}
+
+async function getRefreshDate() {
+  const refreshDate = new Date().toLocaleDateString('en-GB', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    timeZoneName: 'short',
+    timeZone: 'Europe/Stockholm',
+  });
+
+  return Promise.resolve({ refreshDate });
+}
+
+async function getGithubData() {
+  const data = config.github;
+  const enabled =
+    data.stats.mostUsedLanguages ||
+    data.stats.overallStats ||
+    data.highlightedRepos.length > 0;
+
+  const github = {
+    ...data,
+    enabled,
+  };
+
+  return Promise.resolve({ github });
+}
+
+async function generateReadMe(input) {
+	
+	const result = md.render(input);
+	fs.writeFile("README.md", result, function (err) {
+		if (err) return console.log(err);
+		console.log(`${result} > README.md`);
+  });
+}
+
+async function perform() {
+  let promises = [];
+
+  // Medium articles
+  //if (CONFIG.mediumArticles && CONFIG.mediumArticles.enabled) {
+  //  promises.push(getMediumArticles());
+  //}
+
+  // Badges
+  if (config.badges && config.badges.enabled) {
+		promises.push(generateBadges());
+  }
+
+  // Refresh date
+  promises.push(getRefreshDate());
+
+  // Github data
+  promises.push(getGithubData());
+
+  // Social data
+  promises.push(getSocialData());
+
+  // Get Instagram images
+  //if (CONFIG.instagram && CONFIG.instagram.enabled) {
+  //  promises.push(getInstagramPosts());
+  //}
+
+  const data = await Promise.all(promises).then(data =>
+    data.reduce((acc, val) => ({ ...acc, ...val }))
+  );
+  
+	input += fs.readFileSync('./templates/about-me.md').toString()
+				.replace("{{welcome}}", config.template.aboutMe.welcome)
+				.replace("{{name}}", config.template.aboutMe.name)
+				.replace("{{declaration}}", config.template.aboutMe.declaration)
+				.replace("{{position}}", config.template.aboutMe.position)
+				.replace("{{location}}", config.template.aboutMe.location);
+
+	input += "\n\n";
+
+	input += "## Tools and Technologies<hr>";
+	input += buildBadges(data.badges);
+
+	input += "\n\n";
+	input += "## Stats<hr>";
+	input += fs.readFileSync('./templates/github-stats.md').toString()
+					.replaceAll("{{username}}", config.github.username);
+
+	input += "\n\n";
+	input += fs.readFileSync('./templates/footer.md').toString()
+					.replace("{{refreshDate}}", data.refreshDate)
+					.replaceAll("{{username}}", config.github.username);
+	
+  console.log(`✅ README.md has been succesfully built!`);
+
+  generateReadMe(input);
+}
+
+function buildBadges(data)
+{
+	let result = '';
+	for (var i in data)
+	{		
+		result += `<img alt="${data[i].name}" src="https://img.shields.io/badge/-${data[i].name}-${data[i].color}?style=flat-square&logo=${data[i].logo}&logoColor=white" />`;
+	}
+
+	return result;
+}
+
+perform();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function Rainbow()
 {
@@ -316,125 +479,3 @@ function ColourGradient()
 if (typeof module !== 'undefined') {
   module.exports = Rainbow;
 }
-
-
-
-
-
-
-async function getSocialData() {
-  const social = config.social.map(item => ({
-    ...item,
-    logo: item.logo || item.name,
-  }));
-  return Promise.resolve({ social });
-}
-
-async function generateBadges() {
-  const colors = new Rainbow();
-  colors.setNumberRange(1, config.badges.list.length);
-  colors.setSpectrum(...config.badges.spectrum);
-
-  const formattedBadges = config.badges.list.map((badge, index) => ({
-    name: badge.name,
-    logo: badge.logo || badge.name.toLocaleLowerCase(),
-    color: colors.colourAt(index),
-  }));
-
-  return Promise.resolve({ badges: formattedBadges });
-}
-
-async function getRefreshDate() {
-  const refreshDate = new Date().toLocaleDateString('en-GB', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    timeZoneName: 'short',
-    timeZone: 'Europe/Stockholm',
-  });
-
-  return Promise.resolve({ refreshDate });
-}
-
-async function getGithubData() {
-  const data = config.github;
-  const enabled =
-    data.stats.mostUsedLanguages ||
-    data.stats.overallStats ||
-    data.highlightedRepos.length > 0;
-
-  const github = {
-    ...data,
-    enabled,
-  };
-
-  return Promise.resolve({ github });
-}
-
-async function generateReadMe(input) {
-	
-	const result = md.render(input);
-	fs.writeFile("README.md", result, function (err) {
-		if (err) return console.log(err);
-		console.log(`${result} > README.md`);
-  });
-}
-
-async function perform() {
-  let promises = [];
-
-  // Medium articles
-  //if (CONFIG.mediumArticles && CONFIG.mediumArticles.enabled) {
-  //  promises.push(getMediumArticles());
-  //}
-
-  // Badges
-  if (config.badges && config.badges.enabled) {
-		promises.push(generateBadges());
-  }
-
-  // Refresh date
-  promises.push(getRefreshDate());
-
-  // Github data
-  //promises.push(getGithubData());
-
-  // Social data
-  promises.push(getSocialData());
-
-  // Get Instagram images
-  //if (CONFIG.instagram && CONFIG.instagram.enabled) {
-  //  promises.push(getInstagramPosts());
-  //}
-
-  const input = await Promise.all(promises).then(data =>
-    data.reduce((acc, val) => ({ ...acc, ...val }))
-  );
-  
-  console.log(input);
-  
-	let badgesResult = '';
-	
-	for (var i in input.badges)
-	{
-		console.log(input.badges[i]);
-		console.log(input.badges[i].name);
-		console.log(input.badges[i].color);
-		
-		badgesResult += '<img alt="' + input.badges[i].name + '" src="https://img.shields.io/badge/-' + input.badges[i].name + "-" + input.badges[i].color + '?style=flat-square&logo=' + input.badges[i].logo + '&logoColor=white" />';
-		
-	}
-	
-	badgesResult += `<hr><p align="center">This README file is automatically generated every day! The last refresh was on ${input.refreshDate}.<br/></p>
-					<p align="center"><img src="https://github.com/${config.github.username}/${config.github.username}/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/${config.github.username}/${config.github.username}?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/${config.github.username}/${config.github.username}?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/${config.github.username}" alt="Profile views"/></p>`;
-
-
-	
-  console.log(`✅ README.md has been succesfully built!`);
-
-  generateReadMe(badgesResult);
-}
-
-perform();
