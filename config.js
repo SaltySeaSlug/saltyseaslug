@@ -78,17 +78,20 @@ badges: {
         name: 'Jupyter',
       },
       {
-        name: 'apache-netbeans-ide',
+        name: 'Netbeans',
+        logo: 'apache-netbeans-ide',
       },
       {
         name: 'Notepad++',
         logo: 'notepad%2b%2b',
       },
       {
-        name: 'visual-studio-code',
+        name: 'Visual Studio Code',
+        logo: 'visual-studio-code',
       },
       {
-        name: 'visual-studio',
+        name: 'Visual Studio',
+        logo: 'visual-studio',
       },
       {
         name: 'c-sharp',
@@ -112,13 +115,16 @@ badges: {
         name: 'powershell',
       },
       {
-        name: 'gnu-bash',
+        name: 'Bash',
+        logo: 'gnu-bash',
       },
       {
-        name: 'windows-terminal',
+        name: 'Command Prompt',
+        logo: 'windows-terminal',
       },
       {
-        name: 'microsoft-office',
+        name: 'Microsoft Office',
+        logo: 'microsoft-office',
       },
       {
         name: 'linux',
@@ -133,13 +139,15 @@ badges: {
         name: 'docker',
       },
       {
-        name: 'pi-hole',
+        name: 'Pi Hole',
+        logo: 'pi-hole',
       },
       {
         name: 'postman',
       },
       {
-        name: 'raspberry-pi',
+        name: 'Raspberry Pi',
+        logo: 'raspberry-pi',
       },
       {
         name: 'swagger',
