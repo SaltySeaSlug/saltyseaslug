@@ -94,7 +94,7 @@ badges: {
         logo: 'visual-studio',
       },
       {
-        name: 'C%23-%23',
+        name: 'C%23',
         logo: 'c-sharp',
       },
       {
@@ -116,11 +116,11 @@ badges: {
         name: 'PowerShell',
       },
       {
-        name: 'Bash',
+        name: 'Bash Shell',
         logo: 'gnu-bash',
       },
       {
-        name: 'Command Prompt',
+        name: 'Windows Terminal',
         logo: 'windows-terminal',
       },
       {

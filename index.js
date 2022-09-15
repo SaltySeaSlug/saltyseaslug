@@ -120,7 +120,9 @@ async function perform() {
 	let stats = fs.readFileSync('./templates/github-stats.md');
 	let footer = fs.readFileSync('./templates/footer.md');
 	
-	let about = aboutPage.toString()
+	let about = `<div id="header" align="center"><img src="https://tradefills.com/wp-content/uploads/2022/01/forex-banner-1536x362.png" width="100%" height="150"/></div>\n\n`;
+
+	about += aboutPage.toString()
 				.replace("{{welcome}}", config.template.aboutMe.welcome)
 				.replace("{{name}}", config.template.aboutMe.name)
 				.replace("{{declaration}}", config.template.aboutMe.declaration)
