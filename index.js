@@ -322,6 +322,13 @@ if (typeof module !== 'undefined') {
 
 
 
+async function getSocialData() {
+  const social = config.social.map(item => ({
+    ...item,
+    logo: item.logo || item.name,
+  }));
+  return Promise.resolve({ social });
+}
 
 async function generateBadges() {
   const colors = new Rainbow();
