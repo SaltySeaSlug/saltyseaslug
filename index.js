@@ -427,7 +427,7 @@ async function perform() {
 	
   console.log(`✅ README.md has been succesfully built!`);
 
-  generateReadMe(input);
+  generateReadMe(badgesResult);
 }
 
 perform();
