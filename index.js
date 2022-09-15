@@ -136,7 +136,7 @@ async function perform() {
 	input += "\n\n";
 
 
-	input += "<!--START_SECTION:badges-->\n\n<!--END_SECTION:badges-->";
+	input += "\n\n  <!--START_SECTION:badges-->\n\n<!--END_SECTION:badges-->";
 
 	input += "\n\n";
 	input += "## Stats";
