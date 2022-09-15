@@ -423,7 +423,7 @@ async function perform() {
 		console.log(input.badges[i].name);
 		console.log(input.badges[i].color);
 		
-		badgesResult += '<img alt="' + badges[i].name + '" src="https://img.shields.io/badge/-' + badges[i].name + "-" + badges[i].color + '?style=flat-square&logo=' + badges[i].logo + '&logoColor=white" />';
+		badgesResult += '<img alt="' + input.badges[i].name + '" src="https://img.shields.io/badge/-' + input.badges[i].name + "-" + input.badges[i].color + '?style=flat-square&logo=' + input.badges[i].logo + '&logoColor=white" />';
 		
 	}
 	
