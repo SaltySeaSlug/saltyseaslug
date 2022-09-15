@@ -5,87 +5,162 @@ badges: {
     spectrum: ['46a2f1', '311C87', 'DD0031'],
     list: [
       {
-        name: 'Angular',
+        name: 'Microsoft Edge',
+        logo: 'Microsoft-edge',
       },
       {
-        name: 'Vue',
-        logo: 'vue.js',
+        name: 'Google Chrome',
+        logo: 'GoogleChrome',
       },
       {
-        name: 'Polymer',
-        logo: 'polymer-project',
+        name: 'Github Actions',
+        logo: 'githubactions',
       },
       {
-        name: 'Webpack',
+        name: 'Firebase',
       },
       {
-        name: 'Docker',
-      },
-      {
-        name: 'Typescript',
-      },
-      {
-        name: 'Javascript',
-      },
-      {
-        name: 'Redux',
-      },
-      {
-        name: 'Sass',
-      },
-      {
-        name: 'Git',
-      },
-      {
-        name: 'AWS',
-        logo: 'amazon-aws',
-      },
-      {
-        name: 'Python',
-      },
-      {
-        name: 'Ruby on Rails',
-        logo: 'ruby-on-rails',
-      },
-      {
-        name: 'Github',
-      },
-      {
-        name: 'npm',
-      },
-      {
-        name: 'HTML5',
-      },
-      {
-        name: 'Bootstrap',
-      },
-      {
-        name: 'Jest',
-      },
-      {
-        name: 'Cypress',
-      },
-      {
-        name: 'Jasmine',
-      },
-      {
-        name: 'Mocha',
+        name: 'MariaDB',
       },
       {
         name: 'MongoDB',
       },
       {
-        name: 'PostgreSQL',
+        name: 'mysql',
       },
       {
-        name: 'MySQL',
+        name: 'sqlite',
       },
       {
-        name: 'Prettier',
+        name: 'microsoft sql server',
       },
       {
-        name: 'NodeJS',
-        logo: 'Node.js',
+        name: 'Postgres',
+        logo: 'postgresql',
+      },
+      {
+        name: '.NET',
+      },
+      {
+        name: 'Bootstrap',
+      },
+      {
+        name: 'Chart.js',
+      },
+      {
+        name: 'CodeIgniter',
+      },
+      {
+        name: 'jquery',
+      },
+      {
+        name: 'npm',
+      },
+      {
+        name: 'Xamarin',
+      },
+      {
+        name: 'AWS',
+      },
+      {
+        name: 'Azure',
+        logo: 'microsoftazure',
+      },
+
+      {
+        name: 'Android Studio',
+        logo: 'android-studio',
+      },
+      {
+        name: 'Atom',
+      },
+      {
+        name: 'Jupyter',
+      },
+      {
+        name: 'apache-netbeans-ide',
+      },
+      {
+        name: 'Notepad++',
+        logo: 'notepad%2b%2b',
+      },
+      {
+        name: 'visual-studio-code',
+      },
+      {
+        name: 'visual-studio',
+      },
+      {
+        name: 'c-sharp',
+      },
+      {
+        name: 'css3',
+      },
+      {
+        name: 'html5',
+      },
+      {
+        name: 'javascript',
+      },
+      {
+        name: 'markdown',
+      },
+      {
+        name: 'php',
+      },
+      {
+        name: 'powershell',
+      },
+      {
+        name: 'gnu-bash',
+      },
+      {
+        name: 'windows-terminal',
+      },
+      {
+        name: 'microsoft-office',
+      },
+      {
+        name: 'linux',
+      },
+      {
+        name: 'windows',
+      },
+      {
+        name: 'arduino',
+      },
+      {
+        name: 'docker',
+      },
+      {
+        name: 'pi-hole',
+      },
+      {
+        name: 'postman',
+      },
+      {
+        name: 'raspberry-pi',
+      },
+      {
+        name: 'swagger',
+      },
+      {
+        name: 'trello',
+      },
+      {
+        name: 'google',
+      },
+      {
+        name: 'apache',
+      },
+      {
+        name: 'nginx',
+      },
+      {
+        name: 'git',
+      },
+      {
+        name: 'github',
       },
     ],
   },
