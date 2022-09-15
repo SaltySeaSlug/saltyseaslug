@@ -325,10 +325,10 @@ if (typeof module !== 'undefined') {
 
 async function generateBadges() {
   const colors = new Rainbow();
-  colors.setNumberRange(1, CONFIG.badges.list.length);
-  colors.setSpectrum(...CONFIG.badges.spectrum);
+  colors.setNumberRange(1, config.badges.list.length);
+  colors.setSpectrum(...config.badges.spectrum);
 
-  const formattedBadges = CONFIG.badges.list.map((badge, index) => ({
+  const formattedBadges = config.badges.list.map((badge, index) => ({
     name: badge.name,
     logo: badge.logo || badge.name.toLocaleLowerCase(),
     color: colors.colourAt(index),
@@ -352,7 +352,7 @@ async function getRefreshDate() {
 }
 
 async function getGithubData() {
-  const data = CONFIG.github;
+  const data = config.github;
   const enabled =
     data.stats.mostUsedLanguages ||
     data.stats.overallStats ||
