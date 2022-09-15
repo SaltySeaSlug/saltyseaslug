@@ -2,7 +2,7 @@ const config = require('./config.js');
 const hljs = require('highlight.js');
 const md = require("markdown-it")({
   html: true, // Enable HTML tags in source
-  breaks: true, // Convert '\n' in paragraphs into <br>
+  breaks: false, // Convert '\n' in paragraphs into <br>
   linkify: true, // Autoconvert URL-like text to links
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
@@ -78,13 +78,9 @@ async function getGithubData() {
 
 async function generateReadMe(input, aboutMe) {
 	
-	//const result = md.render(input);
+	const result = md.render(input);
 
-	result = _.map(input.split('\n'), function(line) {
-		return md.render(line).trim();
-	}).join('\n');
-
-	fs.writeFile("README.md", aboutMe + "\n\n" + result, function (err) {
+	fs.writeFile("README.md", aboutMe + "\n\n" + result + "\n\n<!--START_SECTION:badges--> <!--END_SECTION:badges-->", function (err) {
 		if (err) return console.log(err);
 		console.log(`${result} > README.md`);
   });
@@ -139,12 +135,6 @@ async function perform() {
 	input += "## Tools and Technologies\n";
 	input += buildBadges(data.badges);
 	
-	input += "\n\n";
-	input += "  ";
-	input += "\n\n";
-
-	input += "<!--START_SECTION:badges--> <!--END_SECTION:badges-->";
-
 	input += "\n\n";
 	input += "## Stats";
 	input += stats.toString()
