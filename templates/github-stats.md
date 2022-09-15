@@ -4,7 +4,7 @@
     <img src="https://github-readme-stats-gilt-sigma.vercel.app/api?username={{username}}&show_icons=true&theme=dracula&count_private=true&hide_title=true"/>
   <!--STAT-END-->
   <!--TOP-START-->
-    <img src="https://github-readme-stats-gilt-sigma.vercel.app/api/top-langs/?username={{username}}&theme=dracula&langs_count=8&layout=compact$hide_title=true" />
+    <img src="https://github-readme-stats-gilt-sigma.vercel.app/api/top-langs/?username={{username}}&theme=dracula&langs_count=8&layout=compact&hide_title=true" />
   <!--TOP-END-->
   </div>
 </div>

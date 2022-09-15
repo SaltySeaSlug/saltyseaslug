@@ -217,7 +217,7 @@ social: [
 ],
  github: {
     enabled: true,
-    username: 'saltyseaslug',
+    username: 'SaltySeaSlug',
     colors: {
       title: '24292e',
       text: '24292e',
