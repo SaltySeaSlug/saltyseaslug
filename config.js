@@ -229,7 +229,7 @@ social: [
 template: {
 	showHeaderImage: false,
 	aboutMe: {
-    welcome: "Hello, World!",
+    welcome: "Welcome, to my profile",
     name: "Mark",
     declaration: "self-taught self-proclaimed full-stack developer",
     position: "Senior Analyst Programmer",

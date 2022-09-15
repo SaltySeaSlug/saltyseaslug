@@ -134,6 +134,8 @@ async function perform() {
 	input += "## Tools and Technologies\n";
 	input += buildBadges(data.badges);
 
+	intput += `<!--START_SECTION:badges--><!--END_SECTION:badges-->`;
+
 	input += "\n\n";
 	input += "## Stats";
 	input += stats.toString()
