@@ -129,7 +129,7 @@ async function perform() {
 
 	input += "\n\n";
 
-	input += "## Tools and Technologies";
+	input += "## Tools and Technologies\n";
 	input += buildBadges(data.badges);
 
 	input += "\n\n";
