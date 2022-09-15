@@ -413,6 +413,8 @@ async function perform() {
     data.reduce((acc, val) => ({ ...acc, ...val }))
   );
   
+  console.log(input);
+  
 	let badgesResult = '';
 	
 	for (var i in input.badges)
