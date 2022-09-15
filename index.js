@@ -144,7 +144,7 @@ async function perform() {
 	
   console.log(`✅ README.md has been succesfully built!`);
 
-  generateReadMe(input, about, skillsSection);
+  generateReadMe(input, about, skillsSection, badgesSection);
 }
 
 function buildBadges(data)
