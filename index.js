@@ -120,7 +120,7 @@ async function perform() {
 	let stats = fs.readFileSync('./templates/github-stats.md');
 	let footer = fs.readFileSync('./templates/footer.md');
 	
-	aboutPage = aboutPage.toString()
+	let about = aboutPage.toString()
 				.replace("{{welcome}}", config.template.aboutMe.welcome)
 				.replace("{{name}}", config.template.aboutMe.name)
 				.replace("{{declaration}}", config.template.aboutMe.declaration)
