@@ -117,34 +117,33 @@ async function perform() {
     data.reduce((acc, val) => ({ ...acc, ...val }))
   );
   
-	let aboutPage = fs.readFileSync('./templates/about-me.md') + "\n\n";
+	let aboutPage = fs.readFileSync('./templates/about-me.md');
+	let githubStatsPage = fs.readFileSync('./templates/github-stats.md');
+	let footerPage = fs.readFileSync('./templates/footer.md');
+
+	let aboutSection = `<div id="header" align="center"><img src="https://tradefills.com/wp-content/uploads/2022/01/forex-banner-1536x362.png" width="100%" height="150"/></div>\n\n`;
 	let skillsSection = "## Tools and Technologies\n" + buildBadges(data.badges) + "\n\n";
 	let badgesSection = "## Certificates\n\n<!--START_SECTION:badges--> <!--END_SECTION:badges-->\n\n";
-	let stats = fs.readFileSync('./templates/github-stats.md');
-	let footer = fs.readFileSync('./templates/footer.md');
-	
-	let about = `<div id="header" align="center"><img src="https://tradefills.com/wp-content/uploads/2022/01/forex-banner-1536x362.png" width="100%" height="150"/></div>\n\n`;
+	let githubStatsSection = "## Stats\n";
+	let footerSection = '';
 
-	about += aboutPage.toString()
+	aboutSection += aboutPage.toString()
 				.replace("{{welcome}}", config.template.aboutMe.welcome)
 				.replace("{{name}}", config.template.aboutMe.name)
 				.replace("{{declaration}}", config.template.aboutMe.declaration)
 				.replace("{{position}}", config.template.aboutMe.position)
 				.replace("{{location}}", config.template.aboutMe.location);
 
-	input += "\n\n";
-	input += "## Stats";
-	input += stats.toString()
+	githubStatsSection += githubStatsPage.toString()
 				.replace(/{{username}}/gi, config.github.username);
 
-	input += "\n\n";
-	input += footer.toString()
+	footerSection += footerPage.toString()
 				.replace("{{refreshDate}}", data.refreshDate)
 				.replace(/{{username}}/gi, config.github.username);
 	
   console.log(`✅ README.md has been succesfully built!`);
 
-	sections = [ aboutPage, skillsSection, badgesSection ];
+	sections = [ aboutSection, skillsSection, badgesSection, githubStatsSection, footerSection ];
 
   generateReadMe(input, sections);
 }
