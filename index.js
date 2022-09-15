@@ -76,19 +76,19 @@ async function getGithubData() {
   return Promise.resolve({ github });
 }
 
-async function generateReadMe(input, aboutMe, skills, badges) {
+async function generateReadMe(input, sections) {
 	
 	const result = md.render(input);
 
-	fs.writeFile("README.md", aboutMe + skills + badges + result, function (err) {
+	fs.writeFile("README.md", sections.join('\n') + '\n' + result, function (err) {
 		if (err) return console.log(err);
 		console.log(`${result} > README.md`);
   });
 }
 
 async function perform() {
-  let promises = [];
-
+	let promises = [];
+	let sections = [];
   // Medium articles
   //if (CONFIG.mediumArticles && CONFIG.mediumArticles.enabled) {
   //  promises.push(getMediumArticles());
@@ -144,7 +144,9 @@ async function perform() {
 	
   console.log(`✅ README.md has been succesfully built!`);
 
-  generateReadMe(input, about, skillsSection, badgesSection);
+	sections = [ aboutPage, skillsSection, badgesSection ];
+
+  generateReadMe(input, sections);
 }
 
 function buildBadges(data)
