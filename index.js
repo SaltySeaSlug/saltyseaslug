@@ -135,7 +135,7 @@ async function perform() {
 	input += buildBadges(data.badges);
 
 	input += "\n\n";
-	input += `<!--START_SECTION:badges--><!--END_SECTION:badges-->`;
+	input += `<!--START_SECTION:badges-->\n<!--END_SECTION:badges-->`;
 
 	input += "\n\n";
 	input += "## Stats";
