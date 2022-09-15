@@ -135,12 +135,12 @@ async function perform() {
 	input += "\n\n";
 	input += "## Stats";
 	input += stats.toString()
-				.replace(/"{{username}}"/g, config.github.username);
+				.replace(/{{username}}/gi, config.github.username);
 
 	input += "\n\n";
 	input += footer.toString()
 				.replace("{{refreshDate}}", data.refreshDate)
-				.replace(/"{{username}}"/g, config.github.username);
+				.replace(/{{username}}/gi, config.github.username);
 	
   console.log(`✅ README.md has been succesfully built!`);
 
