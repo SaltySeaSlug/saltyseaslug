@@ -392,7 +392,7 @@ async function perform() {
   promises.push(getRefreshDate());
 
   // Github data
-  promises.push(getGithubData());
+  //promises.push(getGithubData());
 
   // Social data
   promises.push(getSocialData());
