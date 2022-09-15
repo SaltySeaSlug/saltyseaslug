@@ -76,10 +76,10 @@ async function getGithubData() {
   return Promise.resolve({ github });
 }
 
-async function generateReadMe(input) {
+async function generateReadMe(input, aboutMe) {
 	
 	const result = md.render(input);
-	fs.writeFile("README.md", result, function (err) {
+	fs.writeFile("README.md", aboutMe + result, function (err) {
 		if (err) return console.log(err);
 		console.log(`${result} > README.md`);
   });
@@ -120,7 +120,7 @@ async function perform() {
 	let stats = fs.readFileSync('./templates/github-stats.md');
 	let footer = fs.readFileSync('./templates/footer.md');
 	
-	input += aboutPage.toString()
+	aboutPage = aboutPage.toString()
 				.replace("{{welcome}}", config.template.aboutMe.welcome)
 				.replace("{{name}}", config.template.aboutMe.name)
 				.replace("{{declaration}}", config.template.aboutMe.declaration)
@@ -144,7 +144,7 @@ async function perform() {
 	
   console.log(`✅ README.md has been succesfully built!`);
 
-  generateReadMe(input);
+  generateReadMe(input, about);
 }
 
 function buildBadges(data)
