@@ -94,7 +94,7 @@ badges: {
         logo: 'visual-studio',
       },
       {
-        name: 'C#',
+        name: 'C%23-%23',
         logo: 'c-sharp',
       },
       {
