@@ -2,7 +2,7 @@ const config = require('./config.js');
 const hljs = require('highlight.js');
 const md = require("markdown-it")({
   html: true, // Enable HTML tags in source
-  breaks: false, // Convert '\n' in paragraphs into <br>
+  breaks: true, // Convert '\n' in paragraphs into <br>
   linkify: true, // Autoconvert URL-like text to links
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
@@ -76,11 +76,11 @@ async function getGithubData() {
   return Promise.resolve({ github });
 }
 
-async function generateReadMe(input, aboutMe) {
+async function generateReadMe(input, aboutMe, badges) {
 	
 	const result = md.render(input);
 
-	fs.writeFile("README.md", aboutMe + "\n\n" + result + "\n\n<!--START_SECTION:badges--> <!--END_SECTION:badges-->", function (err) {
+	fs.writeFile("README.md", aboutMe + "\n\n" + badges + "\n\n<!--START_SECTION:badges--> <!--END_SECTION:badges-->\n\n" + result, function (err) {
 		if (err) return console.log(err);
 		console.log(`${result} > README.md`);
   });
@@ -131,11 +131,6 @@ async function perform() {
 				.replace("{{location}}", config.template.aboutMe.location);
 
 	input += "\n\n";
-
-	input += "## Tools and Technologies\n";
-	input += buildBadges(data.badges);
-	
-	input += "\n\n";
 	input += "## Stats";
 	input += stats.toString()
 				.replace(/{{username}}/gi, config.github.username);
@@ -147,7 +142,7 @@ async function perform() {
 	
   console.log(`✅ README.md has been succesfully built!`);
 
-  generateReadMe(input, about);
+  generateReadMe(input, about, "## Tools and Technologies\n" + buildBadges(data.badges));
 }
 
 function buildBadges(data)
