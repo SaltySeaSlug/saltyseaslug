@@ -79,7 +79,7 @@ async function getGithubData() {
 async function generateReadMe(input, aboutMe) {
 	
 	const result = md.render(input);
-	fs.writeFile("README.md", aboutMe + result, function (err) {
+	fs.writeFile("README.md", aboutMe + "\n\n" + result, function (err) {
 		if (err) return console.log(err);
 		console.log(`${result} > README.md`);
   });
