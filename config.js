@@ -2,6 +2,9 @@
 const config = {
 badges: {
     enabled: true,
+    credly: {
+      enabled: true,
+    },
     spectrum: ['46a2f1', '311C87', 'DD0031'],
     list: [
       {
@@ -213,6 +216,7 @@ social: [
     // },
 ],
  github: {
+    enabled: true,
     username: 'saltyseaslug',
     colors: {
       title: '24292e',
@@ -227,14 +231,16 @@ social: [
     highlightedRepos: ['saltyseaslug'],
   },
 template: {
-	showHeaderImage: false,
+	showHeaderImage: true,
+  showFooter: true,
 	aboutMe: {
+    enabled: true,
     welcome: "Welcome, to my profile",
     name: "Mark",
     declaration: "self-taught self-proclaimed full-stack developer",
     position: "Senior Analyst Programmer",
     location: "Cape Town, South Africa"
-  },
+  }
 },
 };
 

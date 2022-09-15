@@ -78,12 +78,15 @@ async function getGithubData() {
 
 async function generateReadMe(input, sections) {
 	
-	const result = md.render(input);
-
-	fs.writeFile("README.md", sections.join('\n') + '\n' + result, function (err) {
+	//const result = md.render(input);
+	sections = sections.filter(function(e){return e;});
+	//fs.writeFile("README.md", sections.join('\n') + '\n' + result, function (err) {
+	fs.writeFile("README.md", sections.join('\n\n'), function (err) {
 		if (err) return console.log(err);
-		console.log(`${result} > README.md`);
-  });
+		console.log(`${sections} > README.md`);
+  	});
+
+	console.log(`✅ README.md has been succesfully built!`);
 }
 
 async function perform() {
@@ -120,32 +123,81 @@ async function perform() {
 	let aboutPage = fs.readFileSync('./templates/about-me.md');
 	let githubStatsPage = fs.readFileSync('./templates/github-stats.md');
 	let footerPage = fs.readFileSync('./templates/footer.md');
-
-	let aboutSection = `<div id="header" align="center"><img src="https://tradefills.com/wp-content/uploads/2022/01/forex-banner-1536x362.png" width="100%" height="150"/></div>\n\n`;
-	let skillsSection = "## Tools and Technologies\n" + buildBadges(data.badges) + "\n\n";
-	let badgesSection = "## Certificates\n\n<!--START_SECTION:badges--> <!--END_SECTION:badges-->\n\n";
-	let githubStatsSection = "## Stats\n";
+	let aboutSection = '';
+	let skillsSection = '';
+	let certificatesSection = '';
+	let githubStatsSection = '';
 	let footerSection = '';
 
-	aboutSection += aboutPage.toString()
+	if (config.template && config.template.showHeaderImage)
+	{
+		aboutSection += `<div id="header" align="center"><img src="https://tradefills.com/wp-content/uploads/2022/01/forex-banner-1536x362.png" width="100%" height="150"/></div>\n`;
+	}
+
+	if (config.template.aboutMe.enabled)
+	{
+		aboutSection += aboutPage.toString()
 				.replace("{{welcome}}", config.template.aboutMe.welcome)
 				.replace("{{name}}", config.template.aboutMe.name)
 				.replace("{{declaration}}", config.template.aboutMe.declaration)
 				.replace("{{position}}", config.template.aboutMe.position)
 				.replace("{{location}}", config.template.aboutMe.location);
+	}
 
-	githubStatsSection += githubStatsPage.toString()
-				.replace(/{{username}}/gi, config.github.username);
+	if (data.badges && data.badges.length > 0 && config.badges.enabled)
+	{
+		skillsSection += "## Tools and Technologies\n";
+		skillsSection += buildBadges(data.badges) + "\n";
+	}
 
-	footerSection += footerPage.toString()
-				.replace("{{refreshDate}}", data.refreshDate)
+	if (config.badges.credly.enabled)
+	{
+		certificatesSection += "## Certificates\n";
+		certificatesSection += "<!--START_SECTION:badges--> <!--END_SECTION:badges-->\n";
+	}
+
+	if (config.github.enabled)
+	{
+		githubStatsSection += "## Stats\n";
+		let statsClean = "";
+
+		if (config.github.stats.overallStats && config.github.stats.mostUsedLanguages)
+		{
+		 	statsClean = githubStatsPage.toString()
 				.replace(/{{username}}/gi, config.github.username);
+		}
+
+		if (config.github.stats.overallStats == false)
+		{
+			statsClean = statsClean.replace(statsClean.substring(statsClean.indexOf("<!--STAT-START-->")+"<!--STAT-START-->".length, statsClean.lastIndexOf("<!--STAT-END-->")), '');
+		}
+
+		if (config.github.stats.mostUsedLanguages == false)
+		{
+			statsClean = statsClean.replace(statsClean.substring(statsClean.indexOf("<!--TOP-START-->")+"<!--TOP-START-->".length, statsClean.lastIndexOf("<!--TOP-END-->")), '');
+		}
+
+		if (data.github.highlightedRepos && data.github.highlightedRepos.length > 0)
+		{
+			for (var repo in data.github.highlightedRepos)
+			{
+				statsClean += `<a href="https://github.com/${config.github.username}/${data.github.highlightedRepos[repo]}"><img src="https://github-readme-stats-gilt-sigma.vercel.app/api/pin/?username=${config.github.username}&repo=${data.github.highlightedRepos[repo]}&title_color=${config.github.colors.title}&text_color=${config.github.colors.text}&icon_color=${config.github.colors.icon}&bg_color=${config.github.colors.background}" /></a>`;
+			}
+		}
+
+		githubStatsSection += statsClean;
+	}
+
+	if (config.template.showFooter)
+	{
+		footerSection += footerPage.toString()
+		.replace("{{refreshDate}}", data.refreshDate)
+		.replace(/{{username}}/gi, config.github.username);
+	}
 	
-  console.log(`✅ README.md has been succesfully built!`);
+	sections = [ aboutSection, skillsSection, certificatesSection, githubStatsSection, footerSection ];
 
-	sections = [ aboutSection, skillsSection, badgesSection, githubStatsSection, footerSection ];
-
-  generateReadMe(input, sections);
+  	generateReadMe(input, sections);
 }
 
 function buildBadges(data)
