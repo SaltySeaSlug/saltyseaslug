@@ -228,7 +228,7 @@ social: [
       mostUsedLanguages: true,
       overallStats: true,
     },
-    highlightedRepos: ['saltyseaslug'],
+    highlightedRepos: [],
   },
 template: {
 	showHeaderImage: true,
