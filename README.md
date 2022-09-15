@@ -32,5 +32,5 @@ Console.WriteLine($"{position}, currently based in {location}.");
   </div>
 </div>
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Thursday, 15 September, 20:54 CEST.<br/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Thursday, 15 September, 21:43 CEST.<br/></p>
 <p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/saltyseaslug" alt="Profile views"/></p>
