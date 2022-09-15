@@ -129,11 +129,11 @@ async function perform() {
 
 	input += "\n\n";
 
-	input += "## Tools and Technologies<hr>";
+	input += "## Tools and Technologies";
 	input += buildBadges(data.badges);
 
 	input += "\n\n";
-	input += "## Stats<hr>";
+	input += "## Stats";
 	input += stats.toString()
 				.replace(/"{{username}}"/g, config.github.username);
 
