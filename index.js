@@ -133,8 +133,10 @@ async function perform() {
 
 	input += "## Tools and Technologies\n";
 	input += buildBadges(data.badges);
+	input += '<br><br>';
 
-	input += "\n\n   <!--START_SECTION:badges--><!--END_SECTION:badges-->   ";
+
+	input += "<!--START_SECTION:badges--><!--END_SECTION:badges-->";
 
 	input += "\n\n";
 	input += "## Stats";
@@ -159,7 +161,7 @@ function buildBadges(data)
 		result += `<img alt="${data[i].name}" src="https://img.shields.io/badge/-${data[i].name}-${data[i].color}?style=flat-square&logo=${data[i].logo}&logoColor=white" />`;
 	}
 
-	return result;
+	return result + "\n\n";
 }
 
 perform();
