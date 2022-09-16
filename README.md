@@ -30,14 +30,15 @@ Console.WriteLine($"{position}, currently based in {location}.");
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
   <!--STAT-START-->
-    <img src="https://github-readme-stats-gilt-sigma.vercel.app/api?username=SaltySeaSlug&show_icons=true&theme=dracula&count_private=true&hide_title=true&include_all_commits=true"/>
+    <img height="115em" src="https://github-readme-stats-gilt-sigma.vercel.app/api?username=SaltySeaSlug&show_icons=true&theme=dracula&count_private=true&hide_title=true&include_all_commits=true$hide_rank=true"/>
   <!--STAT-END-->
   <!--TOP-START-->
-    <img src="https://github-readme-stats-gilt-sigma.vercel.app/api/top-langs/?username=SaltySeaSlug&theme=dracula&langs_count=8&layout=compact&hide_title=true" />
+    <img height="115em" src="https://github-readme-stats-gilt-sigma.vercel.app/api/top-langs/?username=SaltySeaSlug&theme=dracula&langs_count=8&layout=compact&hide_title=true" />
   <!--TOP-END-->
+     <img height="115em" src="https://streak-stats.demolab.com/?user=SaltySeaSlug&theme=dracula&langs_count=8&layout=compact&hide_title=true" />
   </div>
 </div>
 
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Thursday, 15 September, 23:52 CEST.<br/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Friday, 16 September, 02:51 CEST.<br/></p>
 <p align="center"><img src="https://github.com/SaltySeaSlug/SaltySeaSlug/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/SaltySeaSlug/SaltySeaSlug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/SaltySeaSlug/SaltySeaSlug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/SaltySeaSlug" alt="Profile views"/></p>
