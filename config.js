@@ -178,11 +178,6 @@ badges: {
   },
 social: [
     {
-      name: 'Medium',
-      color: '12100E',
-      url: 'https://medium.com/@arjenbrandenburgh',
-    },
-    {
       name: 'Github',
       username: 'saltyseaslug',
       color: '12100E',
@@ -191,29 +186,29 @@ social: [
     {
       name: 'Twitter',
       color: '1DA1F2',
-      url: 'https://twitter.com/ArjenBrand',
+      url: 'https://twitter.com/SaltySeaSlug',
     },
     {
       name: 'LinkedIn',
       color: '0077B5',
-      url: 'https://www.linkedin.com/in/arjen-brandenburgh',
+      url: 'https://www.linkedin.com/in/mark-cockbain-53223631',
+    },
+    //{
+    //  name: 'Website',
+    //  color: '4285F4',
+    //  logo: 'google-chrome',
+    //  url: 'https://www.breakthecode.co.za',
+    //},
+    {
+      name: 'Instagram',
+      color: 'E4405F',
+      url: 'https://www.instagram.com/lt.saltyseaslug',
     },
     {
-      name: 'Website',
-      color: '4285F4',
-      logo: 'google-chrome',
-      url: 'https://www.arjenbrandenburgh.nl',
+      name: 'Facebook',
+      color: '1877F2',
+      url: 'https://www.facebook.com/cockbainmark',
     },
-    // {
-    //   name: 'Instagram',
-    //   color: 'E4405F',
-    //   url: 'https://www.instagram.com/username',
-    // },
-    // {
-    //   name: 'Facebook',
-    //   color: '1877F2',
-    //   url: 'https://www.facebook.com/username',
-    // },
 ],
  github: {
     enabled: true,
@@ -231,7 +226,7 @@ social: [
     highlightedRepos: [],
   },
 template: {
-	showHeaderImage: true,
+	showHeaderImage: false,
   showFooter: true,
 	aboutMe: {
     enabled: true,

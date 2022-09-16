@@ -89,6 +89,9 @@ async function generateReadMe(input, sections) {
 	console.log(`✅ README.md has been succesfully built!`);
 }
 
+/**
+ * It takes the input file, and replaces the sections with the data from the promises
+ */
 async function perform() {
 	let promises = [];
 	let sections = [];
@@ -128,10 +131,11 @@ async function perform() {
 	let certificatesSection = '';
 	let githubStatsSection = '';
 	let footerSection = '';
+	let socialSection = '';
 
 	if (config.template && config.template.showHeaderImage)
 	{
-		aboutSection += `<div id="header" align="center"><img src="https://tradefills.com/wp-content/uploads/2022/01/forex-banner-1536x362.png" width="100%" height="150"/></div>\n\n`;
+		aboutSection += `<div id="header" align="center"><img src="./banner.gif" width="100%" height="110em"/></div>\n\n`;
 	}
 
 	if (config.template.aboutMe.enabled)
@@ -153,7 +157,9 @@ async function perform() {
 	if (config.badges.credly.enabled)
 	{
 		certificatesSection += "## Certificates\n";
+		certificatesSection += "<div align='center'>\n";
 		certificatesSection += "<!--START_SECTION:badges--> <!--END_SECTION:badges-->\n";
+		certificatesSection += "</div>\n";
 	}
 
 	if (config.github.enabled)
@@ -194,8 +200,18 @@ async function perform() {
 		.replace("{{refreshDate}}", data.refreshDate)
 		.replace(/{{username}}/gi, config.github.username);
 	}
+
+	if (config.social && data.social.length)
+	{
+		socialSection += "<p align='center'>";
+		for (var i in data.social)
+		{
+			socialSection += `<a href="${data.social[i].url}"><img src="https://img.shields.io/badge/${data.social[i].name}-%23${data.social[i].color}.svg?&style=for-the-badge&logo=${data.social[i].logo}&logoColor=white" /></a>`;
+		}
+		socialSection += "</p><br>";
+	}
 	
-	sections = [ aboutSection, skillsSection, certificatesSection, githubStatsSection, footerSection ];
+	sections = [ aboutSection, socialSection, skillsSection, certificatesSection, githubStatsSection, footerSection ];
 
   	generateReadMe(input, sections);
 }
