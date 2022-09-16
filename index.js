@@ -157,7 +157,7 @@ async function perform() {
 	if (config.badges.credly.enabled)
 	{
 		certificatesSection += "## Certificates\n";
-		certificatesSection += "<div align='center'><!--START_SECTION:badges--> <!--END_SECTION:badges-->\n</div>\n";
+		certificatesSection += "<div align='center'>\n<!--START_SECTION:badges--> <!--END_SECTION:badges-->\n</div>\n";
 	}
 
 	if (config.github.enabled)
