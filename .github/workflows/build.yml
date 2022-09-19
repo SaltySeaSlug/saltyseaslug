@@ -34,4 +34,4 @@ jobs:
       uses: pemtajo/badge-readme@main
       with:       
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        CREDLY_USER: mark-cockbain
+        CREDLY_USER: ${{ secrets.CREDLY_USER }}
