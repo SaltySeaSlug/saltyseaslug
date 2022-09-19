@@ -33,19 +33,33 @@ async function getSocialData() {
   return Promise.resolve({ social });
 }
 
-async function generateBadges() {
+async function generateLearningBadges() {
   const colors = new Rainbow();
-  colors.setNumberRange(1, config.badges.list.length);
-  colors.setSpectrum(...config.badges.spectrum);
+  colors.setNumberRange(1, config.learning.list.length);
+  colors.setSpectrum(...config.learning.spectrum);
 
-  const formattedBadges = config.badges.list.map((badge, index) => ({
+  const formattedBadges = config.learning.list.map((badge, index) => ({
     name: badge.name,
     logo: badge.logo || badge.name.toLocaleLowerCase(),
     color: colors.colourAt(index),
   }));
 
-  return Promise.resolve({ badges: formattedBadges });
+  return Promise.resolve({ learningBadges: formattedBadges });
 }
+
+async function generateBadges() {
+	const colors = new Rainbow();
+	colors.setNumberRange(1, config.badges.list.length);
+	colors.setSpectrum(...config.badges.spectrum);
+  
+	const formattedBadges = config.badges.list.map((badge, index) => ({
+	  name: badge.name,
+	  logo: badge.logo || badge.name.toLocaleLowerCase(),
+	  color: colors.colourAt(index),
+	}));
+  
+	return Promise.resolve({ badges: formattedBadges });
+  }
 
 async function getRefreshDate() {
   const refreshDate = new Date().toLocaleDateString('en-GB', {
@@ -105,6 +119,10 @@ async function perform() {
 		promises.push(generateBadges());
   }
 
+  if (config.learning && config.learning.enabled) {
+	promises.push(generateLearningBadges());
+}
+
   // Refresh date
   promises.push(getRefreshDate());
 
@@ -132,6 +150,7 @@ async function perform() {
 	let githubStatsSection = '';
 	let footerSection = '';
 	let socialSection = '';
+	let busyWithSection = '';
 
 	if (config.template && config.template.showHeaderImage)
 	{
@@ -152,6 +171,12 @@ async function perform() {
 	{
 		skillsSection += "## Tools and Technologies\n";
 		skillsSection += buildBadges(data.badges) + "\n";
+	}
+
+	if (data.learningBadges && data.learningBadges.length > 0 && config.learning.enabled)
+	{
+		busyWithSection += "## Studing, Learning and Improving\n";
+		busyWithSection += buildBadges(data.learningBadges) + "\n";
 	}
 
 	if (config.badges.credly.enabled)
@@ -209,7 +234,7 @@ async function perform() {
 		socialSection += "</p><br>";
 	}
 	
-	sections = [ aboutSection, socialSection, skillsSection, certificatesSection, githubStatsSection, footerSection ];
+	sections = [ aboutSection, socialSection, skillsSection, busyWithSection, certificatesSection, githubStatsSection, footerSection ];
 
   	generateReadMe(input, sections);
 }
@@ -219,7 +244,7 @@ function buildBadges(data)
 	let result = '';
 	for (var i in data)
 	{		
-		result += `<img alt="${data[i].name}" src="https://img.shields.io/badge/-${data[i].name}-${data[i].color}?style=flat-square&logo=${data[i].logo}&logoColor=white" />`;
+		result += `<img alt="${data[i].name}" src="https://img.shields.io/badge/${data[i].name}-${data[i].color}?style=square&logo=${data[i].logo}&logoColor=white" /> `;
 	}
 
 	return result + "\n\n";

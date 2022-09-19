@@ -16,6 +16,13 @@ badges: {
         logo: 'GoogleChrome',
       },
       {
+        name: 'Opera',
+      },
+      {
+        name: 'Firefox Browser',
+        logo: 'Firefox-Browser',
+      },
+      {
         name: 'Github Actions',
         logo: 'githubactions',
       },
@@ -63,14 +70,6 @@ badges: {
         name: 'Xamarin',
       },
       {
-        name: 'AWS',
-      },
-      {
-        name: 'Azure',
-        logo: 'microsoftazure',
-      },
-
-      {
         name: 'Android Studio',
         logo: 'android-studio',
       },
@@ -81,7 +80,7 @@ badges: {
         name: 'Jupyter',
       },
       {
-        name: 'Netbeans',
+        name: 'Apache Netbeans',
         logo: 'apache-netbeans-ide',
       },
       {
@@ -91,6 +90,9 @@ badges: {
       {
         name: 'Visual Studio Code',
         logo: 'visual-studio-code',
+      },
+      {
+        name: 'PHPStorm',
       },
       {
         name: 'Visual Studio',
@@ -119,7 +121,7 @@ badges: {
         name: 'PowerShell',
       },
       {
-        name: 'Bash Shell',
+        name: 'GNU Bash',
         logo: 'gnu-bash',
       },
       {
@@ -174,6 +176,65 @@ badges: {
       {
         name: 'Github',
       },
+    ],
+  },
+learning: {
+    enabled: true,
+    spectrum: ['93cc8f', 'd612e0'],
+    list: [
+      {
+        name: 'Amazon AWS',
+        logo: 'amazonaws',
+      },
+      {
+        name: 'Azure DevOps',
+        logo: 'azure-devops',
+      },
+      {
+        name: 'Tailwind CSS',
+        logo: 'tailwind-css',
+      },
+      {
+        name: 'Vue.js',
+      },
+      {
+        name: 'AngularJS',
+      },
+      {
+        name: 'React',
+      },
+      {
+        name: 'C',
+      },
+      {
+        name: 'Jenkins',
+      },
+      {
+        name: 'TeamCity',
+      },
+      {
+        name: 'RabbitMQ',
+      },
+      {
+        name: 'Redis',
+      },
+      {
+        name: 'Github Actions',
+        logo: 'github-actions',
+      },
+      {
+        name: 'Azure Functions',
+        logo: 'azure-functions',
+      },
+      {
+        name: 'Java',
+      },
+      {
+        name: 'TypeScript',
+      },
+      {
+        name: 'Node.js',
+      }
     ],
   },
 social: [
