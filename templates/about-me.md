@@ -1,5 +1,3 @@
-## Welcome
-
 ``` csharp
 Console.WriteLine("{{welcome}}");
 
@@ -10,6 +8,4 @@ const string location = "{{location}}";
 
 Console.WriteLine("I'm {0} a {1}.", name, declaration);
 Console.WriteLine($"{position}, currently based in {location}.");
-
-
 ```
