@@ -26,24 +26,22 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 ## Certificates
-<!--START_SECTION:badges-->
-[![Microsoft Certified: Azure Fundamentals](https://images.credly.com/size/110x110/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png)](http://www.credly.com/badges/e43c456d-c964-4cc6-93ab-3c1b3e9d7f39 "Microsoft Certified: Azure Fundamentals")
-<!--END_SECTION:badges-->
+<!--START_SECTION:badges--> <!--END_SECTION:badges-->
 
 
 ## Stats
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
   <!--TOP-START-->
-    <img height="178em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/languages.svg#gh-dark-mode-only" />
+    <img height="180em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/languages.svg#gh-dark-mode-only" />
   <!--TOP-END-->
    <!--STAT-START-->
-    <img height="178em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
+    <img height="180em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
   <!--STAT-END-->
   </div>
 </div>
 
 
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Friday, 23 September, 15:51 CEST.<br/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Friday, 23 September, 21:05 CEST.<br/></p>
 <p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img src="https://github.com/saltyseaslug/github-stats/actions/workflows/main.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/saltyseaslug" alt="Profile views"/></p>
