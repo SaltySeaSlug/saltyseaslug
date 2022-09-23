@@ -1,5 +1,3 @@
-## Welcome
-
 ``` csharp
 Console.WriteLine("Welcome, to my profile");
 
@@ -10,9 +8,8 @@ const string location = "Cape Town, South Africa";
 
 Console.WriteLine("I'm {0} a {1}.", name, declaration);
 Console.WriteLine($"{position}, currently based in {location}.");
-
-
 ```
+
 
 <p align='center'><a href="https://github.com/saltyseaslug"><img src="https://img.shields.io/badge/Github-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a><a href="https://twitter.com/SaltySeaSlug"><img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white" /></a><a href="https://www.linkedin.com/in/mark-cockbain-53223631"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=LinkedIn&logoColor=white" /></a><a href="https://www.instagram.com/lt.saltyseaslug"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white" /></a><a href="https://www.facebook.com/cockbainmark"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=for-the-badge&logo=Facebook&logoColor=white" /></a></p><br>
 
@@ -49,5 +46,5 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Monday, 19 September, 10:54 CEST.<br/></p>
-<p align="center"><img src="https://github.com/SaltySeaSlug/SaltySeaSlug/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/SaltySeaSlug/SaltySeaSlug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/SaltySeaSlug/SaltySeaSlug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/SaltySeaSlug" alt="Profile views"/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Friday, 23 September, 12:14 CEST.<br/></p>
+<p align="center"><img src="https://github.com/SaltySeaSlug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/SaltySeaSlug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/SaltySeaSlug/saltySeaslug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/SaltySeaSlug" alt="Profile views"/></p>
