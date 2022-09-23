@@ -35,10 +35,10 @@ Console.WriteLine($"{position}, currently based in {location}.");
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
   <!--TOP-START-->
-    <img height="180em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/languages.svg#gh-dark-mode-only" />
+    <img height="178em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/languages.svg#gh-dark-mode-only" />
   <!--TOP-END-->
    <!--STAT-START-->
-    <img height="180em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
+    <img height="178em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
   <!--STAT-END-->
   </div>
 </div>
