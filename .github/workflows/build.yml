@@ -35,3 +35,10 @@ jobs:
       with:       
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CREDLY_USER: ${{ secrets.CREDLY_USER }}
+    - name: Emit repository_dispatch
+      uses: mvasigh/dispatch-action@main
+      with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: github-stats
+          owner: saltyseaslug
+          event_type: sample_push
