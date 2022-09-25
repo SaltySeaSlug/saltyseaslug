@@ -35,16 +35,15 @@ Console.WriteLine($"{position}, currently based in {location}.");
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
   <!--TOP-START-->
-    <img height="115em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/languages.svg#gh-dark-mode-only" />
+    <img height="180em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/languages.svg#gh-dark-mode-only" />
   <!--TOP-END-->
    <!--STAT-START-->
-    <img height="115em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
+    <img height="180em" src="https://raw.githubusercontent.com/saltyseaslug/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
   <!--STAT-END-->
-   <img height="115em" src="https://streak-stats.demolab.com/?user=saltyseaslug&theme=dracula&langs_count=8&layout=compact&hide_title=true" />
   </div>
 </div>
 
 
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Friday, 23 September, 14:57 CEST.<br/></p>
-<p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/saltyseaslug" alt="Profile views"/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Sunday, 25 September, 02:46 CEST.<br/></p>
+<p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img src="https://github.com/saltyseaslug/github-stats/actions/workflows/main.yml/badge.svg"/> <img alt="Stars" src="https://img.shields.io/github/stars/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img alt="Forks" src="https://img.shields.io/github/forks/saltyseaslug/saltyseaslug?style=flat-square&labelColor=343b41"/> <img src="https://gpvc.arturio.dev/saltyseaslug" alt="Profile views"/></p>
