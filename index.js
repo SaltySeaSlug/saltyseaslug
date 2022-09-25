@@ -193,7 +193,7 @@ async function perform() {
 		if (config.github.stats.overallStats && config.github.stats.mostUsedLanguages)
 		{
 		 	statsClean = githubStatsPage.toString()
-				.replace(/{{username}}/gi, config.github.username);
+				.replace(/{{username}}/gi, config.github.username.toLocaleLowerCase());
 		}
 
 		if (config.github.stats.overallStats == false)
@@ -210,7 +210,7 @@ async function perform() {
 		{
 			for (var repo in data.github.highlightedRepos)
 			{
-				statsClean += `<a href="https://github.com/${config.github.username}/${data.github.highlightedRepos[repo]}"><img src="https://github-readme-stats-gilt-sigma.vercel.app/api/pin/?username=${config.github.username}&repo=${data.github.highlightedRepos[repo]}&title_color=${config.github.colors.title}&text_color=${config.github.colors.text}&icon_color=${config.github.colors.icon}&bg_color=${config.github.colors.background}" /></a>`;
+				statsClean += `<a href="https://github.com/${config.github.username}/${data.github.highlightedRepos[repo].toLocaleLowerCase()}"><img src="https://github-readme-stats-gilt-sigma.vercel.app/api/pin/?username=${config.github.username}&repo=${data.github.highlightedRepos[repo].toLocaleLowerCase()}&title_color=${config.github.colors.title}&text_color=${config.github.colors.text}&icon_color=${config.github.colors.icon}&bg_color=${config.github.colors.background}" /></a>`;
 			}
 		}
 
@@ -221,7 +221,7 @@ async function perform() {
 	{
 		footerSection += footerPage.toString()
 		.replace("{{refreshDate}}", data.refreshDate)
-		.replace(/{{username}}/gi, config.github.username);
+		.replace(/{{username}}/gi, config.github.username.toLocaleLowerCase());
 	}
 
 	if (config.social && data.social.length)
