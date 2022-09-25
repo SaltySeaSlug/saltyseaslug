@@ -1,1 +1,1 @@
-[![GitHub Game of Life](https://github4life.herokuapp.com/saltyseaslug.gif?z=6)](https://github4life.herokuapp.com/saltyseaslug)
+[![GitHub Game of Life](https://github4life.herokuapp.com/{{username}}.gif?z=6)](https://github4life.herokuapp.com/{{username}})
