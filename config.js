@@ -294,7 +294,7 @@ template: {
     welcome: "Welcome, to my profile",
     name: "Mark",
     declaration: "self-taught self-proclaimed full-stack developer",
-    position: "Senior Analyst Programmer",
+    position: "Intergration Engineer and Senior Analyst Programmer",
     location: "Cape Town, South Africa"
   }
 },
