@@ -26,11 +26,7 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 ## Certificates
-<!--START_SECTION:badges-->
-[![Microsoft Certified: Azure Data Fundamentals](https://images.credly.com/size/110x110/images/70eb1e3f-d4de-4377-a062-b20fb29594ea/azure-data-fundamentals-600x600.png)](http://www.credly.com/badges/3893c0ce-07d1-4c06-a5f5-ef3300fad403 "Microsoft Certified: Azure Data Fundamentals")
-[![Microsoft Certified: Azure AI Fundamentals](https://images.credly.com/size/110x110/images/4136ced8-75d5-4afb-8677-40b6236e2672/azure-ai-fundamentals-600x600.png)](http://www.credly.com/badges/c5e19ae3-381d-4816-af67-ed20bfb6e67b "Microsoft Certified: Azure AI Fundamentals")
-[![Microsoft Certified: Azure Fundamentals](https://images.credly.com/size/110x110/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png)](http://www.credly.com/badges/e43c456d-c964-4cc6-93ab-3c1b3e9d7f39 "Microsoft Certified: Azure Fundamentals")
-<!--END_SECTION:badges-->
+<!--START_SECTION:badges--> <!--END_SECTION:badges-->
 
 
 ## Stats
@@ -47,5 +43,5 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Friday, 9 June, 02:43 CEST.<br/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Saturday, 10 June, 02:37 CEST.<br/></p>
 <p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img src="https://github.com/saltyseaslug/github-stats/actions/workflows/main.yml/badge.svg"/> <img src="https://gpvc.arturio.dev/saltyseaslug" alt="Profile views"/></p>
