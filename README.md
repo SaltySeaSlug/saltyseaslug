@@ -43,5 +43,5 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Saturday, 17 May, 02:51 CEST.<br/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Sunday, 18 May, 02:56 CEST.<br/></p>
 <p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img src="https://github.com/saltyseaslug/github-stats/actions/workflows/main.yml/badge.svg"/></p>
