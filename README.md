@@ -26,11 +26,7 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 ## Certificates
-<!--START_SECTION:badges-->
-<a href="https://www.credly.com/badges/3893c0ce-07d1-4c06-a5f5-ef3300fad403" title="Microsoft Certified: Azure Data Fundamentals"><img src="https://images.credly.com/size/80x80/images/70eb1e3f-d4de-4377-a062-b20fb29594ea/azure-data-fundamentals-600x600.png" alt="Microsoft Certified: Azure Data Fundamentals" width="80" height="80"></a>
-<a href="https://www.credly.com/badges/c5e19ae3-381d-4816-af67-ed20bfb6e67b" title="Microsoft Certified: Azure AI Fundamentals"><img src="https://images.credly.com/size/80x80/images/4136ced8-75d5-4afb-8677-40b6236e2672/azure-ai-fundamentals-600x600.png" alt="Microsoft Certified: Azure AI Fundamentals" width="80" height="80"></a>
-<a href="https://www.credly.com/badges/e43c456d-c964-4cc6-93ab-3c1b3e9d7f39" title="Microsoft Certified: Azure Fundamentals"><img src="https://images.credly.com/size/80x80/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" alt="Microsoft Certified: Azure Fundamentals" width="80" height="80"></a>
-<!--END_SECTION:badges-->
+<!--START_SECTION:badges--> <!--END_SECTION:badges-->
 
 
 ## Stats
@@ -47,5 +43,5 @@ Console.WriteLine($"{position}, currently based in {location}.");
 
 
 <hr>
-<p align="center">This README file was automatically generated!<br>The last refresh was on Thursday, 5 February, 02:08 CET.<br/></p>
+<p align="center">This README file was automatically generated!<br>The last refresh was on Friday, 6 February, 02:06 CET.<br/></p>
 <p align="center"><img src="https://github.com/saltyseaslug/saltyseaslug/actions/workflows/build.yml/badge.svg"/> <img src="https://github.com/saltyseaslug/github-stats/actions/workflows/main.yml/badge.svg"/></p>
